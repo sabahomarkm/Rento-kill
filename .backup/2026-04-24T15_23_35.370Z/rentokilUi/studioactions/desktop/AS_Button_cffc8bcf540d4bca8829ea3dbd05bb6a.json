@@ -1,0 +1,124 @@
+{
+    "AS_Button_cffc8bcf540d4bca8829ea3dbd05bb6a": {
+        "id": "AS_Button_cffc8bcf540d4bca8829ea3dbd05bb6a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form1",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ge157d15db964749ba5db5b484a747d3"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_SERVICE_a974f47efc6648389caa1e6be5eb277b",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {
+                "ME_Mapping_e3060939d0ce4fadaf3eb04163c9f638": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e3060939d0ce4fadaf3eb04163c9f638",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtUserName",
+                        "widgetPath": "this.view.txtUserName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form1",
+                        "widgetKUID": "c327f73e69a34eee9ead27635c62ae8f",
+                        "itemKUID": "ge157d15db964749ba5db5b484a747d3",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "userid",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "operationname": "login",
+                            "servicename": "authService",
+                            "type": "identity",
+                            "isDeepLinkRequired": false,
+                            "login_type": "basic"
+                        }
+                    }
+                },
+                "ME_Mapping_ed4758e1d6aa4f34b01233ff5c1b052a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ed4758e1d6aa4f34b01233ff5c1b052a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtPassword",
+                        "widgetPath": "this.view.txtPassword",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form1",
+                        "widgetKUID": "d79b616c033349e38ea50694d6423dcf",
+                        "itemKUID": "ge157d15db964749ba5db5b484a747d3",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "password",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "operationname": "login",
+                            "servicename": "authService",
+                            "type": "identity",
+                            "isDeepLinkRequired": false,
+                            "login_type": "basic"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_e3060939d0ce4fadaf3eb04163c9f638", "ME_Mapping_ed4758e1d6aa4f34b01233ff5c1b052a"],
+            "serviceconfig": {
+                "operationname": "login",
+                "servicename": "authService",
+                "type": "identity",
+                "isDeepLinkRequired": false,
+                "login_type": "basic"
+            },
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }, {
+            "id": "ADD_SNIPPET_cd3ba389cb5c42aaae99f66fa89bab2a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(\"Login sucessfull\");",
+            "parentId": "INVOKE_SERVICE_a974f47efc6648389caa1e6be5eb277b",
+            "callbackType": "Success"
+        }, {
+            "id": "NAVIGATE_TO_FORM__bc0c22265ff94064bdf16492696e79de",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "Form2",
+            "formKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+            "projectName": "rentokilUi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_SERVICE_a974f47efc6648389caa1e6be5eb277b",
+            "callbackType": "Success",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "ADD_SNIPPET_adfe39b5330149d699af90c5fdf3faa1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(\"Login failed. Please try again\");",
+            "parentId": "INVOKE_SERVICE_a974f47efc6648389caa1e6be5eb277b",
+            "callbackType": "Failure"
+        }]
+    }
+}

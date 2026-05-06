@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_a5755013ce2c440b9371090eb8d02080": {
+        "id": "AS_FlexContainer_a5755013ce2c440b9371090eb8d02080",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form1",
+            "type": "forms",
+            "platform": "",
+            "KUID": "h62f20809f264b4890d5afe684f709ca"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ib75bade667c47cc857e51a251e51d43",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "userName",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "txtUserName"
+        }]
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "65%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "78.40%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        1,
+        0,
+        1,
+        0
+    ],
+    "_skin_": "s10eb89b05824e1facc1a8ed97d52989",
+    "_text_": "Book a service",
+    "_width_": {
+        "type": "string",
+        "value": "27%"
+    },
+    "actionsInfo": {
+        "eventAssociationMeta": {
+            "event": "onClick"
+        },
+        "skipMapping": true
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "-97.22%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {
+        "blockedUISkin": "sad650e3b554410cb830f137fe29d4c9",
+        "hoverSkin": "sacac96815eb4ea785aca546c79e8734",
+        "pressedSkin": "se7a1b37f11b4bf5828530c358dac47d"
+    },
+    "displaytext": true,
+    "focusskin": "s62d01b8526c49a9b0971268337cd942",
+    "id": "btnSquared",
+    "ide_onClick": "AS_Button_adbd99f14af64c3e978e112af7f1897e",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "bc0806d4a1874944846851f7113592e6",
+    "maxwidth": "42%",
+    "minwidth": "27%",
+    "name": "kony.ui.Button",
+    "parent": "flexSquaredBorderedButton",
+    "pf": "Form1",
+    "responsiveData": {
+        "b1": {
+            "bottom": {
+                "type": "string",
+                "value": "2%"
+            },
+            "height": {
+                "type": "string",
+                "value": "65%"
+            },
+            "padding": [
+                1,
+                0,
+                1,
+                0
+            ],
+            "width": {
+                "type": "string",
+                "value": "27%"
+            }
+        },
+        "b2": {
+            "bottom": {
+                "type": "string",
+                "value": "5dp"
+            },
+            "height": {
+                "type": "string",
+                "value": "70%"
+            },
+            "padding": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "width": {
+                "type": "string",
+                "value": "35%"
+            }
+        },
+        "b3": {
+            "bottom": {
+                "type": "string",
+                "value": "5dp"
+            },
+            "height": {
+                "type": "string",
+                "value": "70%"
+            },
+            "padding": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "width": {
+                "type": "string",
+                "value": "35%"
+            }
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button"
+}

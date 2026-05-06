@@ -1,0 +1,112 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "12%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s320d86ce7aa43a79c7d8a637dec04fa",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "98%"
+    },
+    "actionsInfo": {
+        "skipMapping": true
+    },
+    "allboxes": [],
+    "canUpdateUI": true,
+    "children": [
+        "flexlbl1",
+        "flexwgt1"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "disabledSkins": {
+        "blockedUISkin": "se10403881e545c88517e38d1704fe6e"
+    },
+    "enablescrolling": true,
+    "focusskin": "s055b30cc8544a4092521d1a3c930a38",
+    "id": "flextype",
+    "ide_onClick": "AS_FlexContainer_a0a111d06e974350997e45108e205791",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b75cc4c6a9b24b3c925146507d67935a",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flexFieldsContainer",
+    "pf": "Form1",
+    "responsiveData": {
+        "b1": {
+            "height": {
+                "type": "string",
+                "value": "141px"
+            },
+            "width": {
+                "type": "string",
+                "value": "98%"
+            }
+        },
+        "b2": {
+            "height": {
+                "type": "string",
+                "value": "141px"
+            },
+            "width": {
+                "type": "string",
+                "value": "100%"
+            }
+        },
+        "b3": {
+            "height": {
+                "type": "string",
+                "value": "141px"
+            },
+            "width": {
+                "type": "string",
+                "value": "100%"
+            }
+        }
+    },
+    "responsiveconfig": {
+        "offset": {
+            "b1": 0,
+            "b2": 0,
+            "b3": 0
+        },
+        "span": {
+            "b1": 4,
+            "b2": 4,
+            "b3": 6
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

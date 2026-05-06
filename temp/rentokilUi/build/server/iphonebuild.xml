@@ -1,0 +1,1608 @@
+<!--@Note: This is read only file and not being used at runtime,if we want to update anything do it in zip file \trunk\guieditor\lib\build.zip -->
+<project name="Kony" basedir="." default="build">
+	<target name="buildResources">
+		<unset name="logo"/>
+		<var name="logo" value="${logo_iphone}"/>
+
+		<unset name="splash.image"/>
+		<var name="splash.image" value="${splash.image_iphone}"/>
+
+		<unset name="splash.video"/>
+		<var name="splash.video" value="${splash.video_iphone}"/>
+
+		<delete dir="iphone"/>
+		<mkdir dir="iphone"/>
+		<mkdir dir="iphone/temp"/>
+		<mkdir dir="iphone/resources"/>
+		<mkdir dir="iphone/resources/iphone"/>
+		<mkdir dir="iphone/resources/watch"/>
+		<delete dir ="resources"/>
+		<mkdir dir="resources"/>
+		<mkdir dir="resources/iphone"/>
+		<mkdir dir="resources/watch"/>
+		<mkdir dir="resources/iphone/raw"/>
+		<mkdir dir="resources/iphone/mainbundle"/>
+		
+		<echo message="copying resources/common images"/>
+
+		<if>
+			<equals arg1="${lprojexitsforios}" arg2="true" />
+			<then>
+				<copy todir="resources/iphone" >
+					<fileset dir="${resfolder}/common" includes="*.*,${reslocale.str}"/>
+					<fileset dir="${i18n.iphone.properties}"   excludes="**/*.prop" />
+				</copy>
+			</then>
+			<else>
+				<copy todir="resources/iphone" overwrite="true">
+					<fileset dir="${resfolder}/common" includes="*.*,${reslocale.str}"/>
+					<fileset dir="${i18n.iphone.properties}" includes="**/*.prop" casesensitive="false" />
+				</copy>
+
+			</else>
+		</if>
+
+		<echo message="copying mobile/common images"/>
+		<copy todir="resources/iphone" overwrite="true">
+			<fileset dir="${resfolder}/mobile/common" includes="*.*,${reslocale.str}" excludes="raw/**,videos/**" />
+		</copy>
+
+		<available file="${fonts_workspace}/iPhone" type="dir" property="iphone.workspacefonts.present" />
+		<if>
+			<equals arg1="${iphone.workspacefonts.present}" arg2="true" />
+			<then>
+				<copy todir="resources/iphone" overwrite="true">
+					<fileset dir="${fonts_workspace}/iPhone" includes="*.ttf"/>
+				</copy>
+			</then>
+		</if>
+
+
+		<copy todir="resources/iphone" overwrite="true">
+			<fileset dir="${resfolder}/mobile/native/iphone" excludes="raw/**,videos/**" />
+		</copy>
+		
+		<available file="${resfolder}/mobile/common/raw" type="dir" property="raw.common.present"/>
+		<available file="${resfolder}/mobile/native/iphone/raw" type="dir" property="raw.iphone.present"/>
+		<available file="${resfolder}/mobile/common/videos" type="dir" property="videos.common.present"/>
+		<available file="${resfolder}/mobile/native/iphone/videos" type="dir" property="videos.iphone.present"/>
+		<available file="${resfolder}/mobile/native/iphone/mainbundle" type="dir" property="mainbundle.iphone.present"/>
+		
+		<if>
+			<equals arg1="${raw.common.present}" arg2="true"/>
+			<then>
+				<copy todir="resources/iphone/raw" overwrite="true">
+					<fileset dir="${resfolder}/mobile/common/raw"  />
+				</copy>
+			</then>
+		</if>
+		
+		<if>
+			<equals arg1="${videos.common.present}" arg2="true"/>
+			<then>
+				<copy todir="resources/iphone/raw" overwrite="true">
+					<fileset dir="${resfolder}/mobile/common/videos"  />
+				</copy>
+			</then>
+		</if>
+		
+		<if>
+			<equals arg1="${raw.iphone.present}" arg2="true"/>
+			<then>
+				<copy todir="resources/iphone/raw" overwrite="true">
+					<fileset dir="${resfolder}/mobile/native/iphone/raw"  />
+				</copy>
+			</then>
+		</if>
+		
+        <if>
+			<equals arg1="${mainbundle.iphone.present}" arg2="true"/>
+			<then>
+				<copy todir="resources/iphone/mainbundle" overwrite="true">
+					<fileset dir="${resfolder}/mobile/native/iphone/mainbundle"  />
+				</copy>
+			</then>
+		</if>
+		
+		<if>
+			<equals arg1="${videos.iphone.present}" arg2="true"/>
+			<then>
+				<copy todir="resources/iphone/raw" overwrite="true">
+					<fileset dir="${resfolder}/mobile/native/iphone/videos"  />
+				</copy>
+			</then>
+		</if>
+		
+		<for list="${locales}" param="locale.name">
+			<sequential>
+				<unset name="@{locale.name}.present"/>
+				<available file="resources/iphone/@{locale.name}" type="dir" property="@{locale.name}.present"/>
+				<if>
+					<equals arg1="${@{locale.name}.present}" arg2="true"/>
+					<then>
+						<move todir="resources/iphone/@{locale.name}.lproj">
+							<fileset dir="resources/iphone/@{locale.name}"/>
+						</move>
+						<delete dir="resources/iphone/@{locale.name}"/>
+					</then>
+				</if>
+			  	<unset name="${quicki18n.available}"/>
+			  	<available file="../../${outputdir}/quicki18n/@{locale.name}/InfoPlist.strings" type="file" property="quicki18n.available" />
+	  			<if>
+	  				<equals arg1="${quicki18n.available}" arg2="true"/>
+	  				<then>
+	  					<copy todir="resources/iphone/@{locale.name}.lproj">
+	  						<fileset dir="../../${outputdir}/quicki18n/@{locale.name}" includes="InfoPlist.strings"/>
+	  					</copy>
+	  				</then>
+	  			</if>
+			</sequential>
+		</for>
+
+		<available file="${resfolder}/fonts" type="dir" property="fonts.present" />
+		<if>
+			<equals arg1="${fonts.present}" arg2="true" />
+			<then>
+				<copy todir="resources/iphone" overwrite="true">
+					<fileset dir="${resfolder}/fonts" includes="*.ttf"/>
+				</copy>
+			</then>
+		</if>
+
+		<available file="${resfolder}/fonts/iPhone" type="dir" property="iphone.fonts.present" />
+		<if>
+			<equals arg1="${iphone.fonts.present}" arg2="true" />
+			<then>
+				<copy todir="resources/iphone" overwrite="true">
+					<fileset dir="${resfolder}/fonts/iPhone" includes="*.ttf"/>
+				</copy>
+			</then>
+		</if>
+
+		<!--<available file="${resfolder}/fonts/watch" type="dir" property="iphone.fonts.watch.present" />
+		<if>
+			<equals arg1="${iphone.fonts.watch.present}" arg2="true" />
+			<then>
+				<copy todir="resources/watch" overwrite="true">
+					<fileset dir="${resfolder}/fonts/watch" includes="*.ttf" />
+				</copy>
+			</then>
+		</if>-->
+
+
+		<copy todir="iphone/resources">
+			<fileset dir="resources"/>
+		</copy>
+
+		<delete dir="iphonekbf"/>
+		<mkdir dir="iphonekbf"/>
+		<mkdir dir="iphonekbf/resources"/>
+
+		<!-- platform version starting with 2.6.0 indicates that KBF format changed(image name length restriction removed) -->
+		<concat fixlastline="yes" destfile="resources.properties">
+		platform.version=${platform.version}
+		app.name=${appname}
+		app.version=${appversion}
+		vendor.name=${vendorname}
+		entrypoint=konyapp.o
+		appid=${appid}
+		logo.id=${logo}
+		splash.image=${splash.image}
+		splash.video=${splash.video}
+		splash.video.interruptable=${splash.video.interruptable}
+		splash.animation.duration=${splash.animation.duration}
+		splash.loading.indicator=${splash.iphone.li}
+		bundle.identifier=${bundle.identifier}
+		bundle.version=${bundle.version}
+		app.icon.glossyeffect=${app.icon.glossyeffect}
+		usesScene=${usesScene}
+		konyapp.o.id=konyapp.o
+		konyapp.o.type=1
+		resfolder=${basedir}/resources
+		platform.lib.charts=${enableCharts2D3DiPhoneiPad}
+		watchenabled=${watchenabled}
+		isMVC=${isMVC}
+		watchcompatabilitymode=${watchcompatabilitymode}
+		usesvideo=${usesvideoforios}
+		protectenabled=${protectedmodeenabledios}
+		selfsufficientmodules=${selfsufficientmodulesios}
+		enableMobileFirstAPIs=${enablejsbindings}
+		iosdeploymenttarget=${iosdeploymenttarget}
+		watchosdeploymenttarget=${watchostarget}
+		swiftversion=${swiftversion}
+		isCompositeApp=${isCompositeApp}
+		pushCertificateType=${pushCertificateType}
+		platform.watch.icons.notificationcentericon.38mm=${watchnotificationcentericon_ios38mm}
+		platform.watch.icons.longlooknotificationicon.38mm=${watchlonglooknotificationicon_ios38mm}
+		platform.watch.icons.homescreenicon.38mm=${watchhomescreenicon_ios38mm}
+		platform.watch.icons.shortlooknotificationicon.38mm=${watchshortlookicon_ios38mm}
+		platform.watch.icons.notificationcentericon.42mm=${watchnotificationcentericon_ios42mm}
+		platform.watch.icons.longlooknotificationicon.42mm=${watchlonglooknotificationicon_ios42mm}
+		platform.watch.icons.homescreenicon.42mm=${watchhomescreenicon_ios42mm}
+		platform.watch.icons.shortlooknotificationicon.42mm=${watchshortlookicon_ios42mm}
+		platform.watch.icons.homescreenicon.44mm=${watchhomescreenicon_ios44mm}
+		platform.watch.icons.shortlooknotificationicon.44mm=${watchshortlookicon_ios44mm}
+		platform.watch.icons.companionSettings2x29=${companionSettings2x29}
+		platform.watch.icons.companionSettings3x29=${companionSettings3x29}
+		platform.watch.icons.homeScreen40=${homeScreen40}
+		platform.watch.icons.watchMarketing1x=${watchMarketing1x}
+		platform.watch.startupform=${watchStartUpFormKey}
+		platform.iphone.icons.2x_20=${iphone_notificationicon_2x_20}
+		platform.iphone.icons.3x_20=${iphone_notificationicon_3x_20}
+		platform.iphone.icons.2x_29=${iphone_spotlighticon_2x_29}
+		platform.iphone.icons.3x_29=${iphone_spotlighticon_3x_29}
+		platform.iphone.icons.2x_38=${iphone_notificationicon_2x_38}
+		platform.iphone.icons.3x_38=${iphone_notificationicon_3x_38}
+		platform.iphone.icons.2x_40=${iphone_spotlighticon_2x_40}
+		platform.iphone.icons.3x_40=${iphone_spotlighticon_3x_40}
+		platform.iphone.icons.2x_60=${iphone_appicon_2x_60}
+		platform.iphone.icons.3x_60=${iphone_appicon_3x_60}
+		platform.iphone.icons.2x_64=${iphone_appicon_2x_64}
+		platform.iphone.icons.3x_64=${iphone_appicon_3x_64}
+		platform.iOS.icons.1x_1024=${iphoneipad_appstoreicon_1x_1024}
+		platform.iphone.icons.2x_20_dark=${iphone_notificationicon_2x_20_dark}
+		platform.iphone.icons.3x_20_dark=${iphone_notificationicon_3x_20_dark}
+		platform.iphone.icons.2x_29_dark=${iphone_spotlighticon_2x_29_dark}
+		platform.iphone.icons.3x_29_dark=${iphone_spotlighticon_3x_29_dark}
+		platform.iphone.icons.2x_38_dark=${iphone_notificationicon_2x_38_dark}
+		platform.iphone.icons.3x_38_dark=${iphone_notificationicon_3x_38_dark}
+		platform.iphone.icons.2x_40_dark=${iphone_spotlighticon_2x_40_dark}
+		platform.iphone.icons.3x_40_dark=${iphone_spotlighticon_3x_40_dark}
+		platform.iphone.icons.2x_60_dark=${iphone_appicon_2x_60_dark}
+		platform.iphone.icons.3x_60_dark=${iphone_appicon_3x_60_dark}
+		platform.iphone.icons.2x_64_dark=${iphone_appicon_2x_64_dark}
+		platform.iphone.icons.3x_64_dark=${iphone_appicon_3x_64_dark}
+		platform.iOS.icons.1x_1024_dark=${iphoneipad_appstoreicon_1x_1024_dark}
+		platform.iphone.icons.2x_20_tinted=${iphone_notificationicon_2x_20_tinted}
+		platform.iphone.icons.3x_20_tinted=${iphone_notificationicon_3x_20_tinted}
+		platform.iphone.icons.2x_29_tinted=${iphone_spotlighticon_2x_29_tinted}
+		platform.iphone.icons.3x_29_tinted=${iphone_spotlighticon_3x_29_tinted}
+		platform.iphone.icons.2x_38_tinted=${iphone_notificationicon_2x_38_tinted}
+		platform.iphone.icons.3x_38_tinted=${iphone_notificationicon_3x_38_tinted}
+		platform.iphone.icons.2x_40_tinted=${iphone_spotlighticon_2x_40_tinted}
+		platform.iphone.icons.3x_40_tinted=${iphone_spotlighticon_3x_40_tinted}
+		platform.iphone.icons.2x_60_tinted=${iphone_appicon_2x_60_tinted}
+		platform.iphone.icons.3x_60_tinted=${iphone_appicon_3x_60_tinted}
+		platform.iphone.icons.2x_64_tinted=${iphone_appicon_2x_64_tinted}
+		platform.iphone.icons.3x_64_tinted=${iphone_appicon_3x_64_tinted}
+		platform.iOS.icons.1x_1024_tinted=${iphoneipad_appstoreicon_1x_1024_tinted}
+		platform.apilevel=${platform.apilevel}
+		isLibraryBuild=${isLibraryBuild}
+		build=${build.option}
+		enableCordova=${enableCordova}
+		cordovaglobal=${cordovaglobal}
+		cordovaversion=${cordovaversion}
+		isCarAppEnabled=${isCarAppEnabled}
+		enableiOSLiveActivity=${enableiOSLiveActivity}
+		live_act_configurations=${live_act_configurations}
+		live_act_attributes=${live_act_attributes}
+		cordovapath=${cordovapath}
+		enableawssdk=${enableawssdk}
+		locales=${iphonelocales}
+		DefaultLocale=${DefaultLocale}
+		NFIVersion=${NFIVersion}
+		associated-domains=${universallink}</concat>
+		<if>
+		<equals arg1="debug" arg2="${build.option}"/>
+		<then>
+		<concat fixlastline="yes" destfile="resources.properties" append="true">
+		enableAutomation=${enableAutomation}</concat>
+		</then>
+		</if>	
+
+		<replaceregexp file="resources.properties" match="\\" replace="/" flags="g" />
+		<copy file="resources.properties" tofile="iphonekbf/application.properties" overwrite="true" />
+
+		
+		<available file="${dotwebapps.loc}/iphone/themes" type="dir" property="iphone.themes"/>
+		<if>
+			<equals arg1="${iphone.themes}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf/themes/iphone" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/iphone/themes" includes="*.theme"/>
+				</copy>
+			</then>
+		</if>
+
+		<if>
+			<available file="../../${outputdir}/functionalmodules" type="dir" />
+			<then>
+				<copy todir="iphonekbf/functionalmodules" overwrite="true">
+					<fileset dir="../../${outputdir}/functionalmodules" includes="*.xml"/>
+				</copy>
+			</then>
+		</if>
+
+		<if>
+			<equals arg1="${dev.language}" arg2="lua"/>
+			<then>
+				<echo message="Generating kbf for iphone..."/>
+				<exec executable="${basedir}/kappgen.bat" failonerror="true" failifexecutionfails="true">
+					<arg value="${log4jpath}" />
+					<arg value="${basedir}/" />
+					<arg value="resources" />
+				</exec>
+				<copy file="${luac.file}" todir="iphonekbf" overwrite="true" />
+				<delete file ="${luac.file}"/>
+				<copy file="konyapp.kbf" tofile="iphonekbf/voltmxappiphone.kbf" overwrite="true" />
+			</then>
+			<else>
+				<echo message="Copying javascript files and theme files."/>
+				
+				<if>
+		 			<equals arg1="${isMVC}" arg2="true" />
+		 			<then>
+		 				<!--copy todir="iphonekbf/javascript/common" overwrite="true">					 
+		 				 	<fileset dir="${project.loc}/jssrc/iphone/default" includes="*.js"/>
+		 				</copy-->
+		 				<copy todir="iphonekbf/javascript/iphone" overwrite="true">
+		 				 	<fileset dir="${project.loc}/jssrc/iphone/require" includes="*/**"/>
+		 				</copy>
+		 				
+		 				<if>
+		 					<equals arg1="${isCompositeApp}" arg2="true" />
+		 					<then>
+		 						<copy todir="iphonekbf/javascript/iphone/startup" overwrite="true">					 
+				 					<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*/**"/>
+				 					<fileset dir="${project.loc}/jssrc/iphone/default" includes="*/**"/>
+				 				</copy>	
+		 					</then>
+		 					<else>
+		 						<copy todir="iphonekbf/javascript/iphone/startup" overwrite="true">					 
+				 					<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*.js"/>
+				 					<fileset dir="${project.loc}/jssrc/iphone/default" includes="*.js"/>
+				 				</copy>
+		 					</else>
+		 				</if>
+		 				
+		 			</then>
+		 			<else>
+		 				<copy todir="iphonekbf/javascript/common" overwrite="true">					 
+		 					<fileset dir="${project.loc}/jssrc/iphone/nongenerated" includes="*.js"/>
+		 				</copy>
+		 				<copy todir="iphonekbf/javascript/iphone/startup" overwrite="true">
+		 					<fileset dir="${project.loc}/jssrc/iphone/generated" includes="*.js"/>
+		 					<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*.js"/>
+		 				</copy>
+		 				<copy todir="iphonekbf/javascript/iphone" overwrite="true">
+		 					<fileset dir="${project.loc}/jssrc/iphone/require" includes="*/**"/>
+		 			 	</copy>
+		 			</else>
+		 		</if>
+				
+				<if>
+					<available file="${project.loc}/jssrc/iphone/nongenerated/workerthreads" type="dir" />
+					<then>
+						<copy todir="iphonekbf/workerthreads" overwrite="true">
+							<fileset dir="${project.loc}/jssrc/iphone/nongenerated/workerthreads" includes="*.js"/>
+						</copy>
+					</then>
+				</if>
+				<if>
+					<available file="${project.loc}/jssrc/iphone/workerthreads" type="dir" />
+					<then>
+						<copy todir="iphonekbf/workerthreads" overwrite="true">
+							<fileset dir="${project.loc}/jssrc/iphone/workerthreads" includes="*.js"/>
+						</copy>
+					</then>
+				</if>
+			</else>
+		</if>
+
+		<copy todir="iphonekbf/resources">
+			<fileset dir="resources" excludes="*.o"/>
+		</copy>
+
+		<if>
+			<available file="${project.loc}/web" type="dir" />
+				 <then>
+				 	<zip destfile="iphonekbf/web.zip" basedir="${project.loc}/web" update="true">
+					</zip>
+				</then>	
+		</if>
+
+		<!-- start js custom widgets for iphone-->
+		<echo message=" custom widgets for iphone" />
+		<if>
+			<equals arg1="${dev.language}" arg2="js"/>
+			<then>
+				<available file="${customwidgets.dir}/iphone" type="dir" property="iphone.js.libs.available" />
+				<if>
+					<equals arg1="${iphone.js.libs.available}" arg2="true"/>
+					<then>
+						<copy todir="iphonekbf/customwidgets">
+							<fileset dir="${customwidgets.dir}/iphone" includes="*.*"/>
+						</copy>
+					</then>
+				</if>
+				<available file="${ios.customwidgets.xml.dir}" type="dir" property="iphone.js.xml.available" />
+				<echo message=" js custom widget xml file available is  ${iphone.js.xml.available}" />
+				<if>
+					<equals arg1="${iphone.js.xml.available}" arg2="true"/>
+					<then>
+						<copy todir="iphonekbf/customwidgets">
+							<fileset dir="${ios.customwidgets.xml.dir}" includes="*.xml"/>
+							<globmapper from="*" to="cwi_*"/>
+						</copy>
+					</then>
+				</if>
+			</then>
+		</if>
+
+
+		<!-- Start : ffi for iphone-->
+		<available file="${iphone.libs.folder}" type="dir" property="iphone.libs.available" />
+		<if>
+			<equals arg1="${iphone.libs.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf">
+					<fileset dir="${iphone.libs.folder}" includes="**"/>
+				</copy>
+			</then>
+		</if>
+ 
+		
+		<if>
+			<equals arg1="${enableawssdk}" arg2="true"/>
+			<then>
+			<available file="${awssdkfileloc}" property="awssdk.available"/>
+				<if>
+					<equals arg1="${awssdk.available}" arg2="true"/>
+					<then>
+						<copy todir="iphonekbf/cloudsdks">
+							<fileset dir="${project.loc}/cloudsdks"  includes="*.*"/>
+						</copy>	
+					</then>
+						<else>
+						<echo message="aws-sdk.js file doesn't exits in you project please import/download AWS SDk." />
+						</else>
+				</if>
+				</then>
+		</if>
+		
+		<!--available file="${iphone.templates.folder}" type="dir" property="iphone.templates.available" />
+		<if>
+			<equals arg1="${iphone.templates.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf">
+					<fileset dir="${iphone.templates.folder}" includes="*.*"/>
+				</copy>
+			</then>
+		</if>
+		<available file="${iphone.templates.folder}" type="dir" property="iphone.templates.available" />
+		<if>
+			<equals arg1="${iphone.templates.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf">
+					<fileset dir="${iphone.templates.folder}" includes="*.*"/>
+				</copy>
+			</then>
+		</if-->
+		<available file="${ffi.xml.dir}" type="dir" property="ffi.xml.available" />
+		<if>
+			<equals arg1="${ffi.xml.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf">
+					<fileset dir="${ffi.xml.dir}" includes="*.*"/>
+					<globmapper from="*" to="lua_*"/>
+				</copy>
+			</then>
+		</if>
+		<unset name="ffi.xml.available"/>
+		<available file="${js.ffi.xml.dir}" type="dir" property="ffi.xml.available" />
+		<if>
+			<equals arg1="${ffi.xml.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf" >
+					<fileset dir="${js.ffi.xml.dir}" includes="*.xml"/>
+					<globmapper from="*" to="js_*"/>
+				</copy>
+			</then>
+		</if>
+		<unset name="ffi.xml.available"/>
+		<!-- End : ffi for iphone-->
+
+		<if>
+			<equals arg1="${iphone.secure.build}" arg2="true"/>
+			<then>
+				<available file="${iospolicyinjection.loc}\libKonyMAMPolicy.zip" property="ios.available"/>
+				<if>
+					<equals arg1="${ios.available}" arg2="true"/>
+					<then>
+						<copy todir="iphonekbf">
+							<fileset dir="${iospolicyinjection.loc}" includes="libKonyMAMPolicy.zip"/>
+						</copy>
+					</then>
+				</if>
+			</then>
+		</if>
+
+
+		<!-- Copy settings.properties  for iphone-->
+		<available file="../../${outputdir}/Settings.properties.xml" type="file" property="setting.properties.xml.available" />
+		<echo message="setting value  ${setting.properties.xml.available}" />
+		<if>
+			<equals arg1="${setting.properties.xml.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf">
+					<fileset dir="../../${outputdir}" includes="Settings.properties.xml"/>
+				</copy>
+			</then>
+		</if>
+		
+		<!-- Copy StaticQuickActions.xml  for iphone-->
+		<available file="../../${outputdir}/StaticQuickActions.xml" type="file" property="StaticQuickActions.xml.available" />
+		<if>
+			<equals arg1="${StaticQuickActions.xml.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf" overwrite="true">
+					<fileset dir="../../${outputdir}" includes="StaticQuickActions.xml"/>
+				</copy>
+			</then>
+		</if>
+
+
+		<!-- Copy pluginversions.properties for iphone-->
+		<available file="iOS/pluginversions.properties" type="file" property="pluginversion.properties.xml.available" />
+		<echo message="plugin properties  ${pluginversion.properties.xml.available}" />
+		<if>
+			<equals arg1="${pluginversion.properties.xml.available}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf">
+					<fileset dir="iOS" includes="pluginversions.properties"/>
+				</copy>
+			</then>
+		</if>
+		
+		<!-- Start Copy infoplist_configuration.json file for iphone-->
+		<echo message="infoPlist File location :   ${project.loc}/infoplist_configuration.json" />
+		<available file="${project.loc}/infoplist_configuration.json" type="file" property="infoplist.configuration.available" />
+		<echo message="infoPlist File:  ${infoplist.configuration.available}" />
+		<if>
+			<equals arg1="${infoplist.configuration.available}" arg2="true"/>
+				<then>
+					<copy file="${project.loc}/infoplist_configuration.json" todir="iphonekbf"/>
+				</then>
+		</if>
+					
+		<!-- END Copy infoplist_configuration.json file for iphone-->
+		
+		<!-- Copy  splashscreenproperties.json for iphone-->
+		
+		<echo message="splashscreenproperties.json File location :   ${project.loc}/resources/common/splashscreenproperties.json" />
+		<available file="${resfolder}/common/splashscreenproperties.json" type="file" property="splashscreen.properties.json.available" />
+		<echo message="splashproperties File:  ${splashscreen.properties.json.available}" />
+		<if>
+			<equals arg1="${splashscreen.properties.json.available}" arg2="true"/>
+				<then>
+					<copy file="${resfolder}/common/splashscreenproperties.json" todir="iphonekbf"/>
+				</then>
+		</if>
+					
+		<!-- END Copy splashscreenproperties.json file for iphone-->
+		
+
+	</target>
+
+	<target name="build">
+
+		<delete dir="${codedir}" failonerror="false"/>
+		<mkdir dir="${codedir}"/>
+		<if>
+			<equals arg1="${iphone.hybridmode}" arg2="mixed"/>
+			<then>
+				<copy todir="${codedir}" overwrite="true">
+					<fileset dir="../../${outputdir}/${codedir}hybrid" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+				</copy>
+				<available file="../../${outputdir}/${codedir}hybrid/iphone" type="dir" property="iphonelua.present"/>
+				<if>
+					<equals arg1="${iphonelua.present}" arg2="true" />
+					<then>
+						<copy todir="${codedir}" overwrite="true">
+							<fileset dir="../../${outputdir}/${codedir}hybrid/iphone" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+						</copy>
+					</then>
+				</if>
+			</then>
+			<else>
+				<if>
+					<equals arg1="${iphone.hybridmode}" arg2="native"/>
+					<then>
+						<copy todir="${codedir}" overwrite="true">
+							<fileset dir="../../${outputdir}/${codedir}" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+						</copy>
+						<available file="../../${outputdir}/${codedir}/iphone" type="dir" property="iphonelua.present"/>
+						<if>
+							<equals arg1="${iphonelua.present}" arg2="true" />
+							<then>
+								<copy todir="${codedir}" overwrite="true">
+									<fileset dir="../../${outputdir}/${codedir}/iphone" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+								</copy>
+							</then>
+						</if>
+					</then>
+					<else>
+						<copy todir="${codedir}" overwrite="true">
+							<fileset dir="../../${outputdir}/${codedir}wrapper" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+						</copy>
+						<available file="../../${outputdir}/${codedir}wrapper/iphone" type="dir" property="wrapperlua.present"/>
+						<if>
+							<equals arg1="${wrapperlua.present}" arg2="true" />
+							<then>
+								<copy todir="${codedir}" overwrite="true">
+									<fileset dir="../../${outputdir}/${codedir}wrapper/iphone" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+								</copy>
+							</then>
+						</if>
+					</else>
+				</if>
+			</else>
+		</if>
+
+
+		<if>
+			<equals arg1="${iphone.hybridmode}" arg2="mixed"/>
+			<then>
+				<condition property="luasrcHybridIphone" value="hybrid/nativeplatforms/iphone" else="iphone">
+					<equals arg1="${dev.language}" arg2="lua"/>
+				</condition>
+				<!--property name="luasrcHybridIphone" value="hybrid/nativeplatforms/iphone"/-->
+				<!--Copy native headers/footers to lua before applying m4 -->
+				<available file="../../${outputdir}/${codedir}hybrid/native" type="dir" property="hybrid.nativelua.present"/>
+				<if>
+					<equals arg1="${hybrid.nativelua.present}" arg2="true"/>
+					<then>
+						<copy todir="${codedir}" failonerror="false">
+							<fileset dir="../../${outputdir}/${codedir}hybrid/native">
+							</fileset>
+						</copy>
+					</then>
+				</if>
+				<available file="../../${outputdir}/${codedir}hybrid/native/iphone" type="dir" property="native.iphonelua.present"/>
+				<if>
+					<equals arg1="${native.iphonelua.present}" arg2="true" />
+					<then>
+						<copy todir="${codedir}" overwrite="true">
+							<fileset dir="../../${outputdir}/${codedir}hybrid/native/iphone" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+						</copy>
+					</then>
+				</if>
+				<createAndCopyToLuasrc dir.name="${luasrcHybridIphone}" m4constant.name="m4iphone" output.lua.dir="${codedir}hybrid"/>
+				<if>
+					<equals arg1="${dev.language}" arg2="lua"/>
+					<then>
+						<exec executable="cmd.exe" failonerror="true" failifexecutionfails="true">
+							<env key="PATH" path="${env.PATH};${appfolder}/build/luacompiler"/>
+							<arg line='/c "luac${luaprefix} -o ${luac.file}${_debugluafile} ${project.loc}\luasrc\${luasrcHybridIphone}\startup\rcchannel.lua ${project.loc}\luasrc\${luasrcHybridIphone}\nongenerated\*.lua ${project.loc}\luasrc\${luasrcHybridIphone}\generated\*.lua ${project.loc}\luasrc\${luasrcHybridIphone}\startup\startup.lua"'/>
+						</exec>
+					</then>
+				</if>
+
+				<!--Copy static headers/footers to lua before applying m4 -->
+				<available file="../../${outputdir}/${codedir}hybrid/static" type="dir" property="hybrid.staticlua.present"/>
+				<if>
+					<equals arg1="${hybrid.staticlua.present}" arg2="true"/>
+					<then>
+						<copy todir="${codedir}" failonerror="false">
+							<fileset dir="../../${outputdir}/${codedir}hybrid/static">
+							</fileset>
+						</copy>
+					</then>
+				</if>
+				<available file="../../${outputdir}/${codedir}hybrid/static/iphone" type="dir" property="static.iphonelua.present"/>
+				<if>
+					<equals arg1="${static.iphonelua.present}" arg2="true" />
+					<then>
+						<copy todir="${codedir}" overwrite="true">
+							<fileset dir="../../${outputdir}/${codedir}hybrid/static/iphone" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+						</copy>
+					</then>
+				</if>
+				<createAndCopyToLuasrc dir.name="hybrid/spa/iphone" m4constant.name="m4spaip" output.lua.dir="${codedir}hybrid"/>
+			</then>
+			<else>
+				<if>
+					<equals arg1="${iphone.hybridmode}" arg2="wrapper"/>
+					<then>
+						<delete dir="iphonewrappertemp"/>
+						<mkdir dir="iphonewrappertemp"/>
+						<delete dir="iphonewrapper"/>
+						<mkdir dir="iphonewrapper"/>
+						<if>
+							<equals arg1="${dev.language}" arg2="lua"/>
+							<then>
+								<copy todir="iphonewrappertemp">
+									<fileset dir="../../output/luawrapper" includes="globalsinit_native.lua"/>
+								</copy>
+								<exec executable="${basedir}/m4routine.bat" failonerror="true" failifexecutionfails="true">
+									<env key="PATH" path="${env.PATH};${basedir}/m4.exe;${basedir}/regex2.dll;"/>
+									<arg value="iphonewrappertemp"/>
+									<arg value="iphonewrapper"/>
+									<arg value="m4iphone"/>
+								</exec>
+								<delete dir="iphonewrappertemp"/>
+								<copy todir="iphonewrapper">
+									<fileset dir="${project.loc}\luasrc\wrapper\iphone\generated" excludes="globalsinit.lua"/>
+								</copy>
+								<exec executable="cmd.exe" failonerror="true" failifexecutionfails="true">
+									<env key="PATH" path="${env.PATH};${appfolder}/build/luacompiler"/>
+									<arg line='/c "luac${luaprefix} -o ${luac.file}${_debugluafile} ${project.loc}\luasrc\wrapper\iphone\startup\rcchannel.lua ${project.loc}\luasrc\wrapper\iphone\nongenerated\*.lua iphonewrapper\*.lua ${project.loc}\luasrc\wrapper\iphone\startup\startup.lua"'/>
+								</exec>
+							</then>
+							<else>
+								<copy todir="iphonewrappertemp">
+									<fileset dir="../../${outputdir}/jswrapper" includes="startup_native.js"/>
+								</copy>
+								<exec-script executable="${node.file}" >
+									<arg value="${js.file}"/>
+									<arg value="${basedir}/iphonewrappertemp"/>
+									<arg value="${basedir}/iphonewrapper"/>
+									<arg value="iphone"/>
+									<arg value="${plugin.loc}/preview/node_mac"/>
+								</exec-script>
+								<delete dir="iphonewrappertemp"/>
+								<delete dir="${project.loc}\jssrc\iphone"/>
+								<mkdir dir="${project.loc}\jssrc\iphone"/>
+								<copy todir="${project.loc}\jssrc\iphone">
+									<fileset dir="${project.loc}\jssrc\wrapper\iphone"/>
+								</copy>
+								<delete file="${project.loc}\jssrc\iphone\startup\startup_native.js"/>
+								<delete file="${project.loc}\jssrc\iphone\generated\startup_native.js"/>
+								<copy file="iphonewrapper\startup_native.js" tofile="${project.loc}\jssrc\iphone\startup\startup.js" overwrite="true"/>
+							</else>
+						</if>
+					</then>
+					<else>
+						<createAndCopyToLuasrc dir.name="iphone" m4constant.name="m4iphone"/>
+						<if>
+							<equals arg1="${dev.language}" arg2="lua"/>
+							<then>
+								<exec executable="cmd.exe" failonerror="true" failifexecutionfails="true">
+									<env key="PATH" path="${env.PATH};${appfolder}/build/luacompiler"/>
+									<arg line='/c "luac${luaprefix} -o ${luac.file}${_debugluafile} ${project.loc}\luasrc\iphone\startup\rcchannel.lua ${project.loc}\luasrc\iphone\nongenerated\*.lua ${project.loc}\luasrc\iphone\generated\*.lua ${iphonestartupfile}"'/>
+								</exec>
+							</then>
+						</if>
+					</else>
+				</if>
+			</else>
+		</if>
+	</target>
+
+	<!-- This has been modified from copyjssrc, because we are following new structure for wearables
+	<target name="modifiedcopyjssrc">
+
+		<echo message="Copying javascript files and theme files." />
+		<copy todir="iphonekbf/javascript/common" overwrite="true">
+			<fileset dir="${project.loc}/jssrc/iphone/generated" includes="*.js" />
+			<fileset dir="${project.loc}/jssrc/iphone/nongenerated" includes="*.js" />
+			<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*.js" />
+		</copy>
+		<if>
+			<available file="${project.loc}/jssrc/iphone/nongenerated/workerthreads" type="dir" />
+			<then>
+				<copy todir="iphonekbf/workerthreads" overwrite="true">
+					<fileset dir="${project.loc}/jssrc/iphone/nongenerated/workerthreads" includes="*.js" />
+				</copy>
+			</then>
+		</if>
+
+	</target> -->
+
+	<target name="copycarapp">
+		<echo message="Copying javascript files of CarApp folder."/>
+		<if>
+			<equals arg1="${isCarAppEnabled}" arg2="true"/>
+			<then>
+				<copy todir="iphonekbf/javascript/CarApp/startup" overwrite="true">
+					<fileset dir="${project.loc}/modules/CarApp" includes="*/**"/>
+				</copy>
+			</then>
+		</if>
+	</target>
+
+	<target name="copyliveactivities">
+		<echo message="Live Actvities Configurations."/>
+		<if>
+			<equals arg1="${enableiOSLiveActivity}" arg2="true"/>
+			<then>
+				<mkdir dir="iphonekbf/LiveActivities" />
+				<echo message="Copying swift files of Attributes and Configurations subfolder under Live Activities folder."/>
+				<copy todir="iphonekbf/LiveActivities" overwrite="true">
+					<fileset dir="${project.loc}/modules/LiveActivities" includes="*/**"/>
+				</copy>
+				<mkdir dir="iphonekbf/LiveActivities/LiveActivitiesImages" />
+				<echo message="Copying live activities images of LiveActivities folder."/>
+				<copy todir="iphonekbf/LiveActivities/LiveActivitiesImages" overwrite="true">
+					<fileset dir="${project.loc}/resources/LiveActivities" includes="*/**"/>
+				</copy>
+			</then>
+		</if>
+	</target>	
+
+	<target name="copywearables">
+		<!--
+		This target will execute whenever watch is enabled in project properties file. 
+		Visualizer 7.0 onwards this will execute when build for watch platform along with iPhone.
+		-->
+		<if>
+			<equals arg1="${watchenabled}" arg2="true" />
+			<then>
+				<echo message="Copying wearable  assets and theme files." />
+				<echo message="Dotwebapps location : ${dotwebapps.loc}" />
+
+
+				<delete dir="iphonekbf/forms" />
+				<mkdir dir="iphonekbf/forms" />
+				<mkdir dir="iphonekbf/forms/watch" />
+				<mkdir dir="iphonekbf/forms/watch/appforms" />
+				<mkdir dir="iphonekbf/forms/watch/glanceforms" />
+				<mkdir dir="iphonekbf/forms/watch/notificationforms" />
+				<mkdir dir="iphonekbf/forms/watch/templates" />
+				<mkdir dir="iphonekbf/swift" />
+				<mkdir dir="iphonekbf/swift/watch" />
+				<mkdir dir="resources/watch" />
+
+
+				<!--Copying watch related resources for wearables-->
+				
+				<if>
+                <equals arg1="${lprojexitsforios}" arg2="true" />
+                <then>
+                    <copy todir="resources/watch" >
+                        <fileset dir="${resfolder}/common" includes="*.*,${reslocale.str}"/>
+                        <fileset dir="${i18n.iphone.properties}"   excludes="**/*.prop" />
+                    </copy>
+                </then>
+                <else>
+                    <copy todir="resources/watch" overwrite="true">
+                        <fileset dir="${resfolder}/common" includes="*.*,${reslocale.str}"/>
+                        <fileset dir="${i18n.iphone.properties}" includes="**/*.prop" casesensitive="false" />
+                    </copy>
+
+                </else>
+	            </if>
+
+	            <echo message="copying watch/common images"/>
+				
+	            <copy todir="resources/watch" overwrite="true">
+	                <fileset dir="${resfolder}/watch/common" includes="*.*,${reslocale.str}" excludes="raw/**" />
+	            </copy>
+
+				<copy todir="resources/watch" overwrite="true">
+	                <fileset dir="${resfolder}/watch/native/watchos" excludes="raw/**" />
+	            </copy>
+
+	            
+	            <available file="${fonts_workspace}/Apple Watch OS" type="dir" property="watch.workspacefonts.present" />
+	            <if>
+	                <equals arg1="${watch.workspacefonts.present}" arg2="true" />
+	                <then>
+	                    <copy todir="resources/watch" overwrite="true">
+	                        <fileset dir="${fonts_workspace}/Apple Watch OS" includes="*.ttf"/>
+	                    </copy>
+	                </then>
+	            </if>
+				
+				<available file="${resfolder}/fonts" type="dir" property="fonts.present" />
+				<if>
+					<equals arg1="${fonts.present}" arg2="true" />
+					<then>
+						<copy todir="resources/watch" overwrite="true">
+							<fileset dir="${resfolder}/fonts" includes="*.ttf"/>
+						</copy>
+					</then>
+				</if>
+
+				<available file="${resfolder}/fonts/Apple Watch OS" type="dir" property="watch.fonts.present" />
+				<if>
+					<equals arg1="${watch.fonts.present}" arg2="true" />
+					<then>
+						<copy todir="resources/watch" overwrite="true">
+							<fileset dir="${resfolder}/fonts/Apple Watch OS" includes="*.ttf"/>
+						</copy>
+					</then>
+				</if>
+				
+				<echo message="copying resouces watch folder to iphonekbf" />
+				<copy todir="iphonekbf/resources/watch" overwrite="true">
+					<fileset dir="resources/watch"/>
+				</copy>
+
+				<!--<echo message="copying mobile/watch/common images" />
+				<copy todir="iphonekbf/resources/watch" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/images" />
+				</copy>
+
+				<echo message="copying watch resources fonts" />
+				<copy todir="iphonekbf/resources/watch" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/fonts" />
+				</copy>-->
+
+				<echo message="copying watch resources i18n" />
+				<copy todir="iphonekbf/resources/watch" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/i18n" />
+				</copy>
+
+				<for list="${locales}" param="locale.name">
+					<sequential>
+						<move todir="iphonekbf/resources/watch/@{locale.name}.lproj">
+							<fileset dir="iphonekbf/resources/watch/@{locale.name}" />
+						</move>
+						<delete dir="iphonekbf/resources/watch/@{locale.name}" />
+					</sequential>
+				</for>
+
+				<!--Copying watch related themes for wearables-->
+
+				<copy todir="iphonekbf/themes/watch" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/themes" includes="*.theme" />
+				</copy>
+
+				<!--Copying watch related forms for wearables-->
+
+				<echo message="Copying watch forms from .webapps folder." />
+				<copy todir="iphonekbf/forms/watch/appforms" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/forms" />
+				</copy>
+
+				<echo message="Copying watch glanceforms from .webapps folder." />
+				<copy todir="iphonekbf/forms/watch/glanceforms" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/glances" />
+				</copy>
+
+				<echo message="Copying watch notificationforms from .webapps folder." />
+				<copy todir="iphonekbf/forms/watch/notificationforms" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/notifications" />
+				</copy>
+
+				<echo message="Copying watch templates from .webapps folder." />
+				<copy todir="iphonekbf/forms/watch/templates" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/templates" />
+				</copy>
+
+				<!--Copying watch related actions file
+				
+				<echo message="Copying watch actions.js file from .webapps folder." />
+				<copy file="${dotwebapps.loc}/watchos/src/actions_for_${projname}.js" tofile="iphonekbf/javascript/watch/watch_actions_for_${projname}.js"/>-->
+				
+				<!--Copying watch related module files, here swift files also added to watch folder-->
+				<!--For Watch OS2 kar structure has been changed-->
+				<echo message="Copying watch related files from .webapps  folder." />
+				
+				<copy todir="iphonekbf/swift/watch" overwrite="true">
+					<fileset dir="${dotwebapps.loc}/watchos/src" />
+				</copy>
+				
+				
+			</then>
+		</if>
+
+	</target>
+
+	<target name="copyjssrc">
+		<echo message="Copying javascript files and theme files."/>
+		
+ 		<if>
+ 			<equals arg1="${isMVC}" arg2="true" />
+ 			<then>
+ 				<!--copy todir="iphonekbf/javascript/common" overwrite="true">					 
+ 				 	<fileset dir="${project.loc}/jssrc/iphone/default" includes="*.js"/>
+ 				</copy-->
+ 				<copy todir="iphonekbf/javascript/iphone" overwrite="true">
+ 				 	<fileset dir="${project.loc}/jssrc/iphone/require" includes="*/**"/>
+ 				</copy>
+ 				
+ 				<if>
+ 					<equals arg1="${isCompositeApp}" arg2="true" />
+ 					<then>
+ 						<copy todir="iphonekbf/javascript/iphone/startup" overwrite="true">					 
+		 					<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*/**"/>
+		 					<fileset dir="${project.loc}/jssrc/iphone/default" includes="*/**"/>
+		 				</copy>	
+ 					</then>
+ 					<else>
+ 						<copy todir="iphonekbf/javascript/iphone/startup" overwrite="true">					 
+		 					<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*.js"/>
+		 					<fileset dir="${project.loc}/jssrc/iphone/default" includes="*.js"/>
+		 				</copy>
+ 					</else>
+ 				</if>
+ 				
+ 			</then>
+ 			<else>
+ 				<copy todir="iphonekbf/javascript/common" overwrite="true">					 
+ 					<fileset dir="${project.loc}/jssrc/iphone/nongenerated" includes="*.js"/>
+ 				</copy>
+ 				<copy todir="iphonekbf/javascript/iphone/startup" overwrite="true">
+ 					<fileset dir="${project.loc}/jssrc/iphone/generated" includes="*.js"/>
+ 					<fileset dir="${project.loc}/jssrc/iphone/startup" includes="*.js"/>
+ 				</copy>
+ 				<copy todir="iphonekbf/javascript/iphone" overwrite="true">
+ 					<fileset dir="${project.loc}/jssrc/iphone/require" includes="*/**"/>
+ 				</copy>
+ 			</else>
+ 		</if>
+		
+		<if>
+			<available file="${project.loc}/jssrc/iphone/nongenerated/workerthreads" type="dir" />
+			<then>
+				<copy todir="iphonekbf/workerthreads" overwrite="true">
+					<fileset dir="${project.loc}/jssrc/iphone/nongenerated/workerthreads" includes="*.js"/>
+				</copy>
+			</then>
+		</if>
+		<if>
+			<available file="${project.loc}/jssrc/iphone/workerthreads" type="dir" />
+			<then>
+				<copy todir="iphonekbf/workerthreads" overwrite="true">
+					<fileset dir="${project.loc}/jssrc/iphone/workerthreads" includes="*.js"/>
+				</copy>
+			</then>
+		</if>
+	</target>
+	<target name="protectedKAR">
+		<if>
+			<equals arg1="${protectedmodeenabledios}" arg2="true" />
+			<then>
+				
+				<available file="${project.loc}/certificates/_encryptionkeys" type="dir" property="encryptkey.present"/>
+				
+				<if>
+					<equals arg1="${encryptkey.present}" arg2="true" />
+					<then>
+						<property name="certificatesLoc" value="${project.loc}/certificates/_encryptionkeys/"/>
+					</then>
+					<else>
+						<property name="certificatesLoc" value="${workspace.loc}/__encryptionkeys/"/>
+					</else>
+				</if>
+ 
+
+				<delete dir="encryptkar"/>
+				<mkdir dir="encryptkar"/>
+				<mkdir dir="encryptkar/outkeys"/>
+				<mkdir dir="iphonekbf/encryptedkeys"/>
+
+				<copy todir="encryptkar" overwrite="true">
+					<fileset dir="${certificatesLoc}" casesensitive="false"/>
+				</copy>
+				<copy file="${protectjar.loc}/extlibs/EncryptJS.jar"  todir="encryptkar" overwrite="true"/>
+
+				<echo>protectedKAR</echo>
+				<java jar="encryptkar/EncryptJS.jar" fork="true">
+					<arg line="1"/>
+					<arg line="encryptkar/private_key.pem"/>
+					<arg line="./"/>
+					<arg line="encryptkar/outkeys/"/>
+				</java>
+				<echo>key gen done</echo>
+
+				<copy todir="encryptkar/outkeys" overwrite="true">
+					<fileset dir="${certificatesLoc}" excludes="private_key.pem" casesensitive="false"/>
+				</copy>
+
+				<copy todir="iphonekbf/encryptedkeys" overwrite="true">
+					<fileset dir="encryptkar/outkeys/" excludes="private_key.pem" casesensitive="false"/>
+				</copy>
+
+				<delete dir="encryptkar"/>
+			</then>
+		</if>
+	</target>
+	<target name="copyssmodules">
+
+		<!--<if>
+		<equals arg1="${enablejsbindings}" arg2="true"/>
+		<then>-->
+		<delete dir="iphoneselfsufficientmodules" />
+		<length string="${selfsufficientmodulesiosfilepath}" property="length.ssm" />
+		<if>
+			<equals arg1="${length.ssm}" arg2="0" />
+			<then>
+			</then>
+			<else>
+				<mkdir dir="iphoneselfsufficientmodules" />
+				<mkdir dir="iphonekbf/selfsufficientmodules" />
+
+				<for list="${selfsufficientmodulesiosfilepath}" delimiter="," param="val">
+					<sequential>
+						<copy file="@{val}" todir="iphoneselfsufficientmodules" overwrite="true" />
+						<echo message="@{val}" />
+					</sequential>
+				</for>
+				<copy todir="iphonekbf/selfsufficientmodules" overwrite="true">
+					<fileset dir="iphoneselfsufficientmodules" />
+				</copy>
+				<delete dir="iphoneselfsufficientmodules" />
+
+			</else>
+		</if>
+
+		<!--</then>
+		</if>-->
+
+	</target>
+	
+	<target name="copyappextensions">
+		
+		<echo message="----- -- ${isEnableAppExtensions}" />
+		<!--if>
+		<equals arg1="${isEnableAppExtensions}" arg2="true"/>
+		<then-->
+			<length string="${appExtensions}" property="length.appext" />
+			<if>
+				<equals arg1="${length.appext}" arg2="0" />
+				<then>
+				</then>
+				<else>
+					<mkdir dir="iphonekbf/app-extensions" />
+					<for list="${appExtensions}" delimiter="," param="val">
+						<sequential>
+							<mkdir dir="iphonekbf/app-extensions/@{val}" />
+							<available file="${appextBaseFilePath}/@{val}/javascript" type="dir" property="javascript.present"/>
+							<if>
+								<equals arg1="${javascript.present}" arg2="true"/>
+								<then>
+									<mkdir dir="iphonekbf/app-extensions/@{val}/javascript" />
+									<copy todir="iphonekbf/app-extensions/@{val}/javascript" overwrite="true">
+									    <fileset dir="${appextBaseFilePath}/@{val}/javascript" />
+									</copy>
+								</then>							
+							</if>
+							
+							<available file="${appextBaseFilePath}/@{val}/resources" type="dir" property="resources.present"/>
+							<if>
+								<equals arg1="${resources.present}" arg2="true"/>
+								<then>
+									<mkdir dir="iphonekbf/app-extensions/@{val}/resources" />
+									<copy todir="iphonekbf/app-extensions/@{val}/resources" overwrite="true">
+										<fileset dir="${appextBaseFilePath}/@{val}/resources" />
+									</copy>
+								</then>							
+							</if>
+							<copy file="${appextBaseFilePath}/@{val}/Info.plist" todir="iphonekbf/app-extensions/@{val}" overwrite="true" />
+							<copy file="${iOSAppExtTempLocation}/@{val}_extensionsnativemodules.json" tofile="iphonekbf/app-extensions/@{val}/extensionsnativemodules.json" overwrite="true" />
+						</sequential>
+					</for>
+				</else>
+			</if>
+		<!--/then>
+		</if-->
+	</target>
+
+	<target name="copyiphoneappicons">
+		<echo message="Copying iPhone App Icons."/>
+		<property name="appIconsJson" value="./appIcons.json" />
+		<if>
+			<available file="${appIconsJson}"/>
+			<then>
+				<copy file="${appIconsJson}" todir="iphonekbf" overwrite="true" />
+				<delete file="${appIconsJson}"/>
+			</then>
+			<else>
+				<echo message="App Icons JSON file not found, skipping copy of app icons."/>
+			</else>
+		</if>
+	</target>
+
+	<target name="buildKAR" depends="copyjssrc,copywearables,copyssmodules,copycarapp,copyliveactivities,copyappextensions,copyiphoneappicons,protectedKAR,precompile" >
+
+		<echo message="Creating iphone kbf KAR file" />
+		<if>
+			<equals arg1="${hybridmode}" arg2="native"/>
+			<then>
+			</then>
+			<else>
+				<mkdir dir="iphonekbf/kwebmodules"/>
+				<mkdir dir="iphonekbf/tpartywebmodules"/>
+				<available file="${appfolder}/${outputdir}/spaiphone${hybridmode}" type="dir" property="hybriddir.present"/>
+				<if>
+					<equals arg1="${hybriddir.present}" arg2="true"/>
+					<then>
+						<copy todir="iphonekbf/kwebmodules">
+							<fileset dir="${appfolder}/${outputdir}/spaiphone${hybridmode}"/>
+						</copy>
+						<if>
+							<not>
+								<equals arg1="${locales}" arg2=""/>
+							</not>
+							<then>
+								<copy todir="iphonekbf/kwebmodules/resources/strings">
+									<fileset dir="${resfolder}/i18n/iphone_properties" includes="*.prop"/>
+									<mapper type="glob" from="*.prop" to="*.js"/>
+								</copy>
+
+								<replaceregexp match="(.*)" replace="var i18nObject = {\1}" flags="s" byline="false">
+									<fileset dir="iphonekbf/kwebmodules/resources/strings" includes="*.js"/>
+								</replaceregexp>
+
+								<replace dir="iphonekbf/kwebmodules/resources/strings">
+									<include name="*.js"/>
+									<replacefilter token="&quot;=&quot;" value="&quot;:&quot;" />
+									<replacefilter token="&quot;;" value="&quot;,"/>
+								</replace>
+							</then>
+						</if>
+					</then>
+				</if>
+				<copy file="../nativeplatform.js" todir="iphonekbf/kwebmodules/appjs"/>
+				<copy todir="iphonekbf/tpartywebmodules">
+					<fileset dir="${webmodule.loc}"/>
+				</copy>
+				<!-- If not native, then copy spa images also into images folder -->
+				<if>
+					<not>
+						<equals arg1="iphone.hybridmode" arg2="native"/>
+					</not>
+					<then>
+						<mkdir dir="iphonekbf/kwebmodules/images"/>
+						<copy todir="iphonekbf/kwebmodules/images">
+							<fileset dir="iphonekbf/resources"/>
+						</copy>
+
+						<copy todir="iphonekbf/kwebmodules/images" overwrite="true">
+							<fileset dir="${resfolder}/mobile/web/spaiphone"/>
+						</copy>
+
+						<echo message="---webcommons.plugin.loc---- ${webcommons.plugin.loc}"/>
+						<echo message="---assets.dir---- ${assets.dir}/web/images/${spaimgdir.assets}"/>
+						<available file="${webcommons.plugin.loc}/common/wap/inputdata/webfiles/iphone" type="dir" property="tc.images.present"/>
+						<if>
+							<equals arg1="${tc.images.present}" arg2="true"/>
+							<then>
+								<echo message = "Came inside the tc common images"/>
+								<copy todir="iphonekbf/kwebmodules/images" overwrite="true" preservelastmodified="true">
+									<fileset dir="${webcommons.plugin.loc}/common/wap/inputdata/webfiles/iphone" includes="*.*"/>
+								</copy>
+							</then>
+						</if>
+
+						<mkdir dir="iphonekbf/kwebmodules/images/retina"/>
+						<copy todir="iphonekbf/kwebmodules/images/retina" overwrite="true">
+							<fileset dir="iphonekbf/kwebmodules/images"/>
+						</copy>
+					</then>
+				</if>
+			</else>
+		</if>
+		<zip destfile="${basedir}/iphonekbf/voltmxappiphone.KAR" update="true" basedir="${basedir}/iphonekbf" excludes="voltmxappiphone.KAR"/>
+		<available file="${basedir}/iphonekbf" type="dir" property="iphoneKAR.present"/>
+		<if>
+			<equals arg1="${iphoneKAR.present}"  arg2="true"/>
+			<then>
+				<copy todir="${jetty.web}r/kbf" overwrite="true">
+					<fileset dir="${basedir}/iphonekbf" includes="*.KAR,*.kbf"/>
+				</copy>
+			</then>
+		</if>
+	</target>
+
+	<target name="precompile">
+		<!--Any application related setup can be done using this task prior to actual compilation
+		(Ex: Copying a modified Main Activity file,adding additional project.properties)-->
+		<if>
+			<available file="${resfolder}/../iosprecompiletask.xml" />
+			<then>
+				<ant antfile="iosprecompiletask.xml" dir="${resfolder}/../">
+					<property name="app.dir" value="${basedir}/iphonekbf" />
+					<property name="isMobileBuild" value="true"/>
+				</ant>
+			</then>
+			<else>
+				<echo>No precompile task present</echo>
+			</else>
+		</if>
+	</target>
+
+	<target name="nativeiphone">
+
+		<echo message="Creating iphone KAR file for native code.." />
+		<delete dir="kbf"/>
+		<mkdir dir="kbf"/>
+		<mkdir dir="kbf/codegen"/>
+		<mkdir dir="kbf/resources"/>
+
+		<unset name="logo"/>
+		<var name="logo" value="${logo_iphone}"/>
+		<unset name="splash.image"/>
+		<var name="splash.image" value="${splash.image_iphone}"/>
+		<unset name="splash.video"/>
+		<var name="splash.video" value="${splash.video_iphone}"/>
+
+		<copy todir="kbf/resources">
+			<fileset dir="iphone/resources"/>
+		</copy>
+
+
+
+		<if>
+			<equals arg1="${lprojexitsforios}" arg2="true" />
+			<then>
+
+			</then>
+			<else>
+				<for list="${locales}" param="locale.name">
+					<sequential>
+						<move todir="kbf/resources/@{locale.name}.lproj">
+							<fileset dir="kbf/resources/@{locale.name}"/>
+						</move>
+						<delete dir="kbf/resources/@{locale.name}"/>
+
+						<move file="kbf/resources/@{locale.name}.prop" tofile="kbf/resources/@{locale.name}.lproj/Localizable.strings"/>
+						<delete file="kbf/resources/@{locale.name}.prop"/>
+					</sequential>
+				</for>
+
+				<echo message="ignoreStringLocales: ${ignoreStringLocales}"/>
+				<for list="${ignoreStringLocales}" param="locale.name">
+					<sequential>
+						<echo message="deleting string for  @{locale.name}"/>
+						<delete file="kbf/resources/@{locale.name}.lproj/Localizable.strings"/>
+					</sequential>
+				</for>
+
+			</else>
+		</if>
+
+
+		<concat fixlastline="yes" destfile="kbf/application.properties">
+		platform.version=3.2.0.${build}
+		app.name=${appname}
+		app.version=${appversion}
+		vendor.name=${vendorname}
+		entrypoint=konyapp.o
+		appid=${appid}
+		logo.id=${logo}
+		splash.image=${splash.image}
+		splash.video=${splash.video}
+		splash.video.interruptable=${splash.video.interruptable}
+		splash.animation.duration=${splash.animation.duration}
+		splash.loading.indicator=${splash.iphone.li}
+		bundle.identifier=${bundle.identifier}
+		bundle.version=${bundle.version}
+		app.icon.glossyeffect=${app.icon.glossyeffect}
+		usesScene=${usesScene}
+		konyapp.o.id=konyapp.o
+		konyapp.o.type=1
+		resfolder=${basedir}/resources
+		locales=${iphonelocales}
+		DefaultLocale=${DefaultLocale}
+		associated-domains=${universallink}</concat>
+
+		<replaceregexp file="kbf/application.properties" match="\\" replace="/" flags="g" />
+
+		<copy todir="kbf/codegen" overwrite="true">
+			<fileset dir="iphonenative" includes="*.*"/>
+		</copy>
+
+		<available file="${iphone.libs.folder}" type="dir" property="iphone.libs.available" />
+		<if>
+			<equals arg1="${iphone.libs.available}" arg2="true"/>
+			<then>
+				<copy todir="kbf">
+					<fileset dir="${iphone.libs.folder}" includes="*.*"/>
+				</copy>
+			</then>
+		</if>
+		
+		<if>
+			<equals arg1="${enableawssdk}" arg2="true"/>
+			<then>
+			<available file="${awssdkfileloc}" property="awssdk.available"/>
+				<if>
+					<equals arg1="${awssdk.available}" arg2="true"/>
+					<then>
+						<copy todir="iphonekbf/cloudsdks">
+							 <fileset dir="${project.loc}/cloudsdks"  includes="*.*"/>
+						</copy>		
+					</then>
+						<else>
+						<echo message="aws-sdk.js file doesn't exits in you project please import/download AWS SDk." />
+						</else>
+				</if>
+				</then>
+		</if>
+				
+		<available file="${iphone.templates.folder}" type="dir" property="iphone.templates.available" />
+		<if>
+			<equals arg1="${iphone.templates.available}" arg2="true"/>
+			<then>
+				<copy todir="kbf">
+					<fileset dir="${iphone.templates.folder}" includes="*.*"/>
+				</copy>
+			</then>
+		</if>
+		<zip destfile="${basedir}/kbf/voltmxappiphone.KAR" update="false" basedir="${basedir}/kbf">
+		</zip>
+
+		<available file="${basedir}/kbf" type="dir" property="kbf.present"/>
+		<if>
+			<equals arg1="${kbf.present}"  arg2="true"/>
+			<then>
+				<copy todir="${jetty.web}r/kbf" overwrite="true">
+					<fileset dir="${basedir}/kbf" includes="voltmxappiphone.KAR"/>
+				</copy>
+			</then>
+		</if>
+	</target>
+
+	<target name="init">
+		
+			<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		      <classpath>
+		        <pathelement location="${plugin.loc}/lib/ant-contrib-0.6.jar"/>
+		      </classpath>
+		    </taskdef>
+			
+	
+		    <taskdef name="unset" classname="ise.antelope.tasks.Unset">
+				<classpath>
+				    <pathelement location="${plugin.loc}\lib\AntelopeTasks_3.4.0.jar"/>
+				  </classpath>
+			</taskdef>
+			
+			<taskdef resource="com/kony/ant/antkonyscript.properties">
+		      <classpath>
+		        <pathelement location="${plugin.loc}/lib/KonyAntScript.jar"/>
+		      </classpath>
+		    </taskdef>
+		
+	  		<available file="../iphonebuild.properties" type="file" property="iphonebuild.available" />
+			
+			<if>
+				<equals arg1="${iphonebuild.available}" arg2="true"/>
+				<then>
+					<loadproperties srcfile="../iphonebuild.properties">
+					  <filterchain>
+						<filterreader classname="org.apache.tools.ant.filters.EscapeUnicode"/>
+					  </filterchain>
+					</loadproperties>
+				</then>
+			</if>
+		
+			<property name="warFile" value="${basedir}/web/${appid}r.war"/>
+			<property name="warDir" location="${basedir}/web"/>
+			<property name="kbfpath" location="${basedir}"/>
+		   	<property name="winm.dir" location="../luawinmobile6x"/>
+		   	<property name="luac.file" location="${basedir}/resources/konyapp.o"/>
+		  	<property name="winluac.file" location="${basedir}/resources/winkonyapp.o"/>
+			<property name="winphone8luac.file" location="${basedir}/resources/winphone8konyapp.o"/>
+			<property name="windows8luac.file" location="${basedir}/resources/windows8konyapp.o"/>
+			<property name="win6xluac.file" location="${basedir}/resources/win6xkonyapp.o"/>
+			<property name="desktop_kioskluac.file" location="${basedir}/resources/desktop_kioskkonyapp.o"/>
+		  	<property name="bbluac.file" location="${basedir}/resources/bbkonyapp.o"/>
+		  	<property name="iphoneluac.file" location="${basedir}/resources/iphonekonyapp.o"/>
+		  	<property name="ipadluac.file" location="${basedir}/resources/ipadkonyapp.o"/>
+			<property name="androidluac.file" location="${basedir}/kbf/androidkonyapp.o"/>
+			<property name="tabrcandroidluac.file" location="${basedir}/kbf/tabrcandroidkonyapp.o"/>
+			<property name="symbianluac.file" location="${basedir}/resources/symbiankonyapp.o"/>
+		   	<property name="log4jpath" location="${plugin.loc}/lib/log4j-1.2.15.jar"/>
+		   	<property file="../platform.properties"/>
+			<property name="kbf.present" value="false"/>
+			<property name="default.package" value="com/konylabs/ffi"/>
+			<property name="ffi.xml.dir" value="${customlibs.dir}/../xml"/>
+			<property name="js.ffi.xml.dir" value="${customlibs.dir}/../jsXml"/>
+			<property name="iphone.libs.folder" value="${customlibs.dir}/iphone"/>
+			<property name="iphone.templates.folder" value="${customlibs.src.dir}/iphone"/>
+			<property name="ipad.libs.folder" value="${customlibs.dir}/ipad"/>
+			<property name="ipad.templates.folder" value="${customlibs.src.dir}/ipad"/>
+			<property name="bb.libs.folder" value="${customlibs.dir}/blackberry"/>
+			<property name="bb.templates.folder" value="${customlibs.src.dir}/blackberry/${default.package}"/>
+			<property name="j2me.libs.folder" value="${customlibs.dir}/j2me"/>
+			<property name="j2me.templates.folder" value="${customlibs.src.dir}/j2me/${default.package}"/>
+			<property name="isMVC" value="${isMVC}"/>
+			
+			<property name="jetty.web" location="${webapps.loc}/${projname}"/>
+				
+			
+			<condition property="luaprefix" value="" else=" -s">
+				<equals arg1="debug" arg2="${build.option}" casesensitive="false" trim="true"/>
+			</condition>
+			
+			
+			<condition property="_debugluafile" value=" _debug.lua" else="">
+				<and>
+					<equals arg1="debug" arg2="${build.option}" casesensitive="false" trim="true"/>
+					<equals arg1="true" arg2="${luadebug}" casesensitive="false" trim="true"/>
+				</and>
+				<!-- equals arg1="debug" arg2="release" casesensitive="false" trim="true"/ -->
+			</condition>
+			
+			<condition property="iphonestartupfile" value="startup_unit.lua" else="${project.loc}\luasrc\iphone\startup\startup.lua">
+				<equals arg1="true" arg2="${unittesting}" casesensitive="false" trim="true"/>
+			</condition>
+			
+			<condition property="codedir" value="lua" else="js">
+				<equals arg1="lua" arg2="${dev.language}" casesensitive="false" trim="true"/>
+			</condition>
+			
+			<condition property="outputdir" value="output" else="jsoutput">
+				<equals arg1="lua" arg2="${dev.language}" casesensitive="false" trim="true"/>
+			</condition>
+			
+			<property name="pre_indir" location="${basedir}/${codedir}"/>
+			<property name="post_outdir" location="${basedir}/jsformat"/>
+			<property name="js.file" location="${basedir}/js-preprocess.js"/>
+	        <property name="pre_scripts_indir" location="${basedir}/scripts"/>
+	        <property name="pre_scriptswt_indir" location="${basedir}/scriptswt"/>
+			<property name="node.file" location="${basedir}/node"/>
+			<available file="${scripts.dir}/workerthreads" type="dir" property="isworkerthreads"/>
+		
+	</target>
+	<target name="genkar">
+		<zip destfile="${basedir}/iphonekbf/voltmxappiphone.KAR" update="true" basedir="${basedir}/iphonekbf" excludes="voltmxappiphone.KAR"/>
+<available file="${basedir}/iphonekbf" type="dir" property="iphoneKAR.present"/>
+<if>
+	<equals arg1="${iphoneKAR.present}"  arg2="true"/>
+	<then>
+		<copy todir="${jetty.web}r/kbf" overwrite="true">
+			<fileset dir="${basedir}/iphonekbf" includes="*.KAR,*.kbf"/>
+		</copy>
+	</then>
+</if>
+</target>
+
+<target name="instrument_codeCoverage">	 
+
+<if>
+	<equals arg1="${enableCodeCoverage}"  arg2="true"/>
+	<then>	
+	 	
+		<mkdir dir="${basedir}/iphone_codecoverage/instrumentedfiles"/>
+		
+     	<available file="${instrumentJs.loc}/instrumentfiles.js" type="file" property="instrumentjs.present"/>		
+		<if>
+			<equals arg1="${instrumentjs.present}"  arg2="true"/>
+			<then>
+
+				<echo message="Instrumentation started for iPhone."/>
+
+				<copy todir= "${basedir}/iphone_codecoverage/UninstrumentedFiles" overwrite="true">
+					<fileset dir="${instrumentJs.loc}" includes = "*.js" />
+				</copy>
+
+				<echo message="copying un instrumented files to testresource location."/>
+				
+				<copy todir="${baseapp.loc}/testresources/Jasmine/UninstrumentedFiles/iphone" overwrite="true">
+ 				 	<fileset dir="${project.loc}/jssrc/iphone" includes="*/**"/>
+ 				</copy>
+
+ 				<copy todir="${basedir}/iphone_codecoverage/UninstrumentedFiles/iphone" overwrite="true">
+ 				 	<fileset dir="${project.loc}/jssrc/iphone" includes="*/**"/>
+ 				</copy>
+
+				<instrumentation/>
+				
+				<echo message="copying instrumented files to jssrc location."/>
+
+ 				<move todir="${project.loc}/jssrc/iphone" overwrite="true">
+					<fileset dir="${basedir}/iphone_codecoverage/UninstrumentedFiles/instfiles" includes="*/**"/>
+				</move>
+
+			
+				<delete dir="${basedir}/iphone_codecoverage"/>
+
+				<echo message="Instrumentation completed for iPhone."/>
+
+			</then>
+			<else>
+				<echo message="instrument.js file not available in iOS plugin."/>
+			</else>
+		</if>
+	</then>
+</if>
+</target>
+	<macrodef name = "instrumentation" description = "instrumentation of apps folder for code coverage">
+		<sequential>
+			<exec executable="node" dir="${basedir}/iphone_codecoverage/UninstrumentedFiles" failonerror="true" failifexecutionfails="true">
+				<arg value="instrumentfiles.js"/>
+				<arg value="./iphone" />
+				<arg value="./instfiles" />
+				<arg value="${baseapp.loc}" />
+			</exec>
+		</sequential>
+	</macrodef>
+		
+	<target name="cibuildKAR" depends="init,instrument_codeCoverage,buildResources,copywearables,copyssmodules,copycarapp,copyliveactivities,copyappextensions,copyiphoneappicons,protectedKAR,precompile,genkar" />
+</project>

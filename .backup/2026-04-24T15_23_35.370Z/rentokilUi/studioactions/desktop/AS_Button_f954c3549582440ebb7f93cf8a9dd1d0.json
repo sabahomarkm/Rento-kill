@@ -1,0 +1,169 @@
+{
+    "AS_Button_f954c3549582440ebb7f93cf8a9dd1d0": {
+        "id": "AS_Button_f954c3549582440ebb7f93cf8a9dd1d0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form2",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ac7c5805f2794dd994fe7ed2ddc50302"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_SERVICE_ce6717cb6c8b4a218d957c6b109aef68",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {
+                "ME_Mapping_h8e257e787a3476bb0b8ad057cd95b7a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h8e257e787a3476bb0b8ad057cd95b7a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "Username",
+                        "widgetPath": "this.view.Username",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "g1ca4a19422749b786681b8ef7580062",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "pest_control_bookings",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_ea8819152ad642ca89bff13c23677940": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ea8819152ad642ca89bff13c23677940",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "Address",
+                        "widgetPath": "this.view.Address",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "e505dc6362274bda91b69d6b103f39d1",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "address",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "pest_control_bookings",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_i607f62dba2d4e7b8f23ee8d6d90711e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i607f62dba2d4e7b8f23ee8d6d90711e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "serviceName",
+                        "widgetPath": "this.view.serviceName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "a22c0fc512f145f49f43015f6caac752",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "service",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "pest_control_bookings",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_b0ca476b70e74d878286fb41f98a753a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b0ca476b70e74d878286fb41f98a753a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "TypeName",
+                        "widgetPath": "this.view.TypeName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "c1e8d76510b1467c84cf5cf8b0f780f5",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "type",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "pest_control_bookings",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_h8e257e787a3476bb0b8ad057cd95b7a", "ME_Mapping_ea8819152ad642ca89bff13c23677940", "ME_Mapping_i607f62dba2d4e7b8f23ee8d6d90711e", "ME_Mapping_b0ca476b70e74d878286fb41f98a753a"],
+            "serviceconfig": {
+                "servicename": "rentokilApiServices",
+                "type": "objectsvcs",
+                "objectname": "pest_control_bookings",
+                "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                "methodname": "create"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

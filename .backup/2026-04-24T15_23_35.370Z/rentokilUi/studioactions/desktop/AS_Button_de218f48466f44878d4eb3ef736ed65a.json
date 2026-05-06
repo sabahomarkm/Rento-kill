@@ -1,0 +1,32 @@
+{
+    "AS_Button_de218f48466f44878d4eb3ef736ed65a": {
+        "id": "AS_Button_de218f48466f44878d4eb3ef736ed65a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form2",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ac7c5805f2794dd994fe7ed2ddc50302"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__g9e97a9429734bd4829ba364ef35ba63",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "Form3",
+            "formKUID": "h8eb1bf35ced4ce785308a24ee8a9b6d",
+            "projectName": "rentokilUi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

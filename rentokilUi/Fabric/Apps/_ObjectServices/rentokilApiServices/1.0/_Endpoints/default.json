@@ -1,0 +1,17 @@
+{
+  "name" : "default",
+  "dataAdapterId" : "1",
+  "type" : "CustomDataAdapter",
+  "encryptSecureInfo" : false,
+  "config" : {
+    "authservicetype" : "IdentityProvider",
+    "jdbcClass" : "com.mysql.cj.jdbc.Driver",
+    "jdbcUrl" : "jdbc:mysql://root:gUqEQBHtKHefAxRXKrWNYvQpvCtVwwye@shortline.proxy.rlwy.net:14712/railway",
+    "userId" : null,
+    "password" : null,
+    "advancedSettings" : null,
+    "maxPoolSize" : null,
+    "connectionTimeout" : null
+  },
+  "jsonpath" : false
+}

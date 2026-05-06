@@ -1,0 +1,53 @@
+{
+    "AS_Button_hda2b553d6444ae6aed255f6c0c58a68": {
+        "id": "AS_Button_hda2b553d6444ae6aed255f6c0c58a68",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_IDENTITY_SERVICE_ide_onClick_f720bf668aec447da497253275e84c50",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "operationname": "login",
+                "servicename": "authService",
+                "type": "identity",
+                "isDeepLinkRequired": false,
+                "login_type": "basic"
+            },
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_e3fac34c10fd4ed8bdcedfa53d4733a4",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(\"Login sucessfull\");",
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_f720bf668aec447da497253275e84c50",
+            "callbackType": "Success"
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_h227ca443b094b2998f99cb388d6c26f",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "Form2",
+            "formKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+            "projectName": "rentokilUi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_f720bf668aec447da497253275e84c50",
+            "callbackType": "Success",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_c2efe39e10614cce8e4406d1fee00b77",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(\"Login failed. Please try again\");",
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_f720bf668aec447da497253275e84c50",
+            "callbackType": "Failure"
+        }]
+    }
+}

@@ -1,0 +1,1 @@
+function deepCloneWithPrototype(e){if(e===null||typeof e!=="object"){return e}const t=Object.create(Object.getPrototypeOf(e));for(const o of Reflect.ownKeys(e)){t[o]=deepCloneWithPrototype(e[o])}return t}module.exports={deepCloneWithPrototype:deepCloneWithPrototype};

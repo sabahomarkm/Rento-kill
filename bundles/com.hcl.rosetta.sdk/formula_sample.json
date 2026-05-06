@@ -1,0 +1,67 @@
+{
+	"_default": "@Abs(-1);",
+ 
+	"notes": [
+		{
+			"title": "Using @Weekday",
+			"description": "Calculates how many days left till the weekend. Returns 'Working on the Weekend!' if today is Saturday or Sunday. Returns 'TGIF' if today is Friday.",
+			"content":	"ResponseDate := @Now();\n @If(\n @Weekday(ResponseDate) = 7 | @Weekday(ResponseDate) = 1;\n 'Working on the Weekend!';\n @Weekday(ResponseDate) = 6;\n 'TGIF';\n (7 - @Weekday(ResponseDate)) + ' days left till weekend');"
+		},
+		{
+			"title": "Using @Abs",
+			"description": "Returns the absolute value for -2 using Notes Formula.",
+			"content": "@Abs(-2);"
+		},
+		{
+			"title": "Using @BusinessDays",
+			"description": "Returns the number of business days in one year. Excludes Sundays (1) and Saturdays (7).",
+			"content": "@BusinessDays('01/01/2023'; '12/31/2023'; 1 : 7);"
+		},
+		{
+			"title": "Using @Contains",
+			"description": "Determines whether 'Hill' or 'Pane' are stored within the names list.",
+			"content": "names := 'John Jones' : 'Mary Hill'; @Contains(names; 'Hill' : 'Pane');"
+		},
+		{
+			"title": "Using @Replace",
+			"description": "Performs a find-and-replace operation on the text list. Items not found are returned unaltered.",
+			"content": "@Replace('Red':'Orange':'Yellow':'Green';'Orange':'Blue';'Black':'Brown');"
+		},
+		{
+			"title": "Using @Elements",
+			"description": "Calculates the number values in SalesForce. This function always returns the number of entries in the list.",
+			"content": "SalesForce := 'Rogers':'Binney':'Harris':'Larson'; @Elements(SalesForce);"
+		}, 
+		{
+			"title": "Using @IsNumber",
+			"description": "",
+			"content": "@IsNumber(5);"
+		}
+	],
+ 
+	"openFormula": [
+		{
+			"title": "Using =ABS",
+			"description": "Returns the absolute value for -1 using openFormula.",
+			"content": "=ABS(-1)"
+		}
+	],
+
+	"custom": [
+		{
+			"title": "Using @Debug",
+			"description": "Uses the console object's methods to display Debug messages, prepending them with a timestamp.",
+			"content": "@Debug(\"An error occurred processing the formula\"; \"Error\");"
+		},
+		{
+			"title": "Using @Context",
+			"description": "Gets or Sets the API context to either database ('db'), local DOM ('local'), or both ('all') for those APIs that require working with differents contexts such as GetField/SetField.",
+			"content": "@Context();"
+		},
+		{
+			"title": "Using @RestfulAPI",
+			"description": "\"RestfulAPI\" is a generic RESTful API that allows users to interact with any REST endpoint by providing configurable parameters such as the endpoint URL, HTTP method (e.g., GET, POST, PUT, DELETE), headers, request body, and additional request parameters.",
+			"content": "@RestfulAPI(\"https://restcountries.com/v3.1/name/usa?fields=name\");"
+		}
+	]
+}

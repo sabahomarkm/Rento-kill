@@ -1,0 +1,153 @@
+{
+    "models": {
+        "desktop": {
+            "1366": {
+                "class": "GraphLinksModel",
+                "linkDataArray": [
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__bc0c22265ff94064bdf16492696e79de",
+                        "actionSequenceId": "AS_Button_cffc8bcf540d4bca8829ea3dbd05bb6a",
+                        "beautifiedPath": "Form1 > Button0ca746dfef44446 > onClick",
+                        "evt": "ide_onClick",
+                        "from": "ge157d15db964749ba5db5b484a747d3",
+                        "isPSP": false,
+                        "points": [
+                            285.2,
+                            117.026806640625,
+                            295.2,
+                            117.026806640625,
+                            295.2,
+                            117.02680664062501,
+                            295.2,
+                            117.02680664062501,
+                            391.2,
+                            117.02680664062501,
+                            401.2,
+                            117.02680664062501
+                        ],
+                        "to": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "widgetKUID": "gef3a32ec8d940c796c324d82f4a53f4"
+                    },
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__g9e97a9429734bd4829ba364ef35ba63",
+                        "actionSequenceId": "AS_Button_de218f48466f44878d4eb3ef736ed65a",
+                        "beautifiedPath": "Form2 > Button0b4f35962674744 > onClick",
+                        "evt": "ide_onClick",
+                        "from": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "isPSP": false,
+                        "points": [
+                            539.8,
+                            209.026806640625,
+                            539.8,
+                            219.026806640625,
+                            539.8,
+                            236.93603515625,
+                            412.79999999999995,
+                            236.93603515625,
+                            412.79999999999995,
+                            254.845263671875,
+                            412.79999999999995,
+                            264.845263671875
+                        ],
+                        "to": "h8eb1bf35ced4ce785308a24ee8a9b6d",
+                        "widgetKUID": "db77469337a540709cec6d213229ce7c"
+                    },
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__h3ab9561c0894840bed6235c125a8958",
+                        "actionSequenceId": "AS_Button_ga79bca28539434a990d3bcc264f7a19",
+                        "beautifiedPath": "Form2 > Button0b0b270a70ae742 > onClick",
+                        "evt": "ide_onClick",
+                        "from": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "isPSP": false,
+                        "points": [
+                            401.2,
+                            86.36013997395835,
+                            383.2,
+                            86.36013997395835,
+                            332.7,
+                            86.36013997395835,
+                            332.7,
+                            86.36013997395833,
+                            303.2,
+                            86.36013997395833,
+                            285.2,
+                            86.36013997395833
+                        ],
+                        "to": "ge157d15db964749ba5db5b484a747d3",
+                        "widgetKUID": "f4f844a7dd1a4b54bae08dccc1b4e31b"
+                    },
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__ide_onClick_ifa14873d3494232a81a9ece80586b38",
+                        "actionSequenceId": "AS_Button_f4a3f1b929a94eeb86b316e033bb3d0b",
+                        "beautifiedPath": "Form3 > Button0b0b270a70ae742 > onClick",
+                        "evt": "ide_onClick",
+                        "from": "h8eb1bf35ced4ce785308a24ee8a9b6d",
+                        "isPSP": false,
+                        "points": [
+                            320.4,
+                            264.845263671875,
+                            320.4,
+                            254.845263671875,
+                            320.4,
+                            252,
+                            146.6,
+                            252,
+                            146.6,
+                            219.026806640625,
+                            146.6,
+                            209.026806640625
+                        ],
+                        "to": "ge157d15db964749ba5db5b484a747d3",
+                        "widgetKUID": "ebbb7fb80ae34d718fcc8fba0fe20375"
+                    },
+                    {
+                        "actionId": null,
+                        "from": "ge157d15db964749ba5db5b484a747d3",
+                        "points": [
+                            285.2,
+                            117.026806640625,
+                            295.2,
+                            117.026806640625,
+                            295.2,
+                            117.02680664062501,
+                            295.2,
+                            117.02680664062501,
+                            391.2,
+                            117.02680664062501,
+                            401.2,
+                            117.02680664062501
+                        ],
+                        "softLink": true,
+                        "to": "ac7c5805f2794dd994fe7ed2ddc50302"
+                    }
+                ],
+                "nodeDataArray": [
+                    {
+                        "formKUID": "ge157d15db964749ba5db5b484a747d3",
+                        "formName": "Form1",
+                        "isStartupForm": true,
+                        "key": "ge157d15db964749ba5db5b484a747d3",
+                        "loc": "8 25.026806640625",
+                        "thumbnailURL": "/assets/rentokilUi/forms/desktop/Form1.sm/.thumbs/1366.jpeg"
+                    },
+                    {
+                        "formKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "formName": "Form2",
+                        "isStartupForm": false,
+                        "key": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "loc": "401.2 25.026806640625",
+                        "thumbnailURL": "/assets/rentokilUi/forms/desktop/Form2.sm/.thumbs/1366.jpeg"
+                    },
+                    {
+                        "formKUID": "h8eb1bf35ced4ce785308a24ee8a9b6d",
+                        "formName": "Form3",
+                        "isStartupForm": false,
+                        "key": "h8eb1bf35ced4ce785308a24ee8a9b6d",
+                        "loc": "228 264.845263671875",
+                        "thumbnailURL": "/assets/rentokilUi/forms/desktop/Form3.sm/.thumbs/1366.jpeg"
+                    }
+                ]
+            }
+        }
+    }
+}

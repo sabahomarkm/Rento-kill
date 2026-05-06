@@ -1,0 +1,20 @@
+{
+    "customComponent": {
+        "i18nSupported": true,
+        "id": "cwi377d3aa21c347f2a7e4b39e47787931",
+        "isOverride": false,
+        "konyWrapperFiles": [
+            "resources/thirdpartywidgets/widgetwrapper/tp-servicePage-wrapper.js"
+        ],
+        "libraryFiles": [
+            "resources/thirdpartywidgets/ServiceBookingWidget/widget.css",
+            "resources/thirdpartywidgets/ServiceBookingWidget/widget.js"
+        ],
+        "libraryName": "ServiceBookingWidget",
+        "marginSupported": true,
+        "name": "servicePage",
+        "paddingSupported": true,
+        "platformID": "0",
+        "property": []
+    }
+}

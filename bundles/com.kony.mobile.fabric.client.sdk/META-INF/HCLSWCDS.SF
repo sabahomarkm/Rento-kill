@@ -1,0 +1,173 @@
+Signature-Version: 1.0
+Created-By: 11.0.2 (Oracle Corporation)
+SHA-256-Digest-Manifest: 1yWNEXdKRJnkqJj0gLUJPwwoyeGOU2AcD3WIvukG7cw=
+SHA-256-Digest-Manifest-Main-Attributes: 8W0Vbd5qQk8xrJ5mUMrPCl8132Goav9
+ 3uLlYQLEVU2U=
+
+Name: plugin.xml
+SHA-256-Digest: S/GbRkaEvk2CgNZjKSOO+XZnPMvImomEs+7rGyStoFQ=
+
+Name: resources/sdk/kony-js/build/windowsofflineobjects_ffi.zip
+SHA-256-Digest: 5weRCW9xyI1Lk0pM3i8QOI489lAy7B3rNzIEVj2VfEY=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Headers/CMS.h
+SHA-256-Digest: PJWnuemLG4Zj1U5AEodluW4Ixy1hcz/YHr7eE/xLuwM=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Headers/KNYCMSDefaultPersistentStore.h
+SHA-256-Digest: fpYjkuoEvxRT1j0dmPMUkFeAMo4O26EG0BWOHjX+PUc=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Headers/CMS.h
+SHA-256-Digest: lUTtVaIYCQmtGcjkhgIA5qXr+yFkw2Yvo5rCiGCXJm4=
+
+Name: resources/sdk/kony-js/build/logger_ffi.zip
+SHA-256-Digest: hwLeQfeRO2v7fs2xxI8M1kfpJW+vtd/y1YRyIxmUOcU=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/CMS
+SHA-256-Digest: 9XGx4VQ6mt6h5FM/O6Wj2QRI5BgrD4tbhD2WZEbPzgw=
+
+Name: resources/sdk/vizconfigurations/ServerEventsAndroidDependencyREAD_
+ ME.txt
+SHA-256-Digest: LqYH8r+nhvPoqfDPyrqFNG4Ye7aBPrEftxLms7TkawM=
+
+Name: resources/sdk/nativeBindings/v3/Kony_SyncV2-Android-4.0.zip
+SHA-256-Digest: uVuRDZFxxUp+3mJoMK0oJ0k6lHgGoatyvBlUbCKok1k=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/Info.plist
+SHA-256-Digest: 2Mqs4f/Y8QtseHTq78DEvojsPQ1CzBymBBqTEmzV67w=
+
+Name: resources/sdk/nativeBindings/v3/Kony_SDKCommons-Android-4.0.zip
+SHA-256-Digest: D7fJFw9/0Fx3O0olQi93uxPJXxV+zxEubG0xsUgynlQ=
+
+Name: resources/sdk/nativeBindings/v2/Kony_FileStorage-Android-4.0.zip
+SHA-256-Digest: WL2rkr8JL605l54ZVkxTUcVpPQw6hAa7asVfK3YL/NU=
+
+Name: resources/sdk/nativeBindings/v3/Kony_FileStorage-Android-4.0.zip
+SHA-256-Digest: FJ/DSEipQx/IJJomO2EgyzUhkkRXo5qtJ1gFzNq2o6c=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Headers/KNYMetricsService.h
+SHA-256-Digest: E+L3vogFPyPeq2wviyYDd126l29hWDJS6Z2J8xuPaI4=
+
+Name: resources/sdk/nativeBindings/v1/Kony_FileStorage-Android-4.0.zip
+SHA-256-Digest: RjS25T8GyAe2imglqwrm4HleLZdIatoQGLO5JSQl0nI=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Modules/module.modulemap
+SHA-256-Digest: Y/d/j+q6PBCel/RQBv6gIsWFagTKsT5wjFSDmkC1ZDA=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Headers/KNYMetricsServiceConstants.h
+SHA-256-Digest: l7LbjUPAuS0ohl1F4aJlq0tNanhvPBYq6oUmrpqLXPc=
+
+Name: resources/sdk/nativeBindings/v3/Kony_WebSocket-Android-4.0.zip
+SHA-256-Digest: Xw8i8QDoKtbwog0lGDEEFRaFLH/KmeIIQBKEnLg8iPY=
+
+Name: resources/sdk/sharedLibs/android/cms.aar
+SHA-256-Digest: lGytY1rv0DbeeTU6SdPaf/p7DJaD5kZhzLPZVu3UMwE=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Modules/module.modulemap
+SHA-256-Digest: 79tHHVQze/TXNbuBII5l6MVdGL7LlofM2qpUo35t8GQ=
+
+Name: resources/sdk/kony-js/build/voltmx_sdk.js
+SHA-256-Digest: Ugb5S4K+HB8U8orJExXOrA5S16e95QF4m06905q6Gok=
+
+Name: resources/sdk/kony-js/build/voltmx_serverevents.js
+SHA-256-Digest: GWaJFrSZM+2kPck+boSaZRqSrQWmP9Z++U/Mi0I1DXQ=
+
+Name: resources/sdk/kony-js/build/voltmx_spa_offlineobjects.js
+SHA-256-Digest: u8VhZrlmkHdk/mAD4hETvvJtAeOVWhYhBWKz4KaZbx4=
+
+Name: resources/sdk/vizconfigurations/SSOManifestTags.JSON
+SHA-256-Digest: N34WjLh5vxoo2CWCalzvwNA8Q8/5V2C9sK2HbLDd0zk=
+
+Name: resources/sdk/kony-js/build/binary_ffi.zip
+SHA-256-Digest: KxC6s7Z5U/DlcSwxDovOy9VlrUqGPZ6Guz+g7daDLVw=
+
+Name: resources/sdk/nativeBindings/v3/Kony_SyncV2-iOS-14.3.zip
+SHA-256-Digest: BIc0XzEqkrhmX5/6X/UcWVVjYm6WTNuogTtpvEenQ5g=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/CMS
+SHA-256-Digest: gcTkreWGk68onUqqAK4SzPwtdbwEtrFy+quDUutX/cg=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: bvSZZe9yEvQTiRPe/GgGMLsl45Qk0YD8VNQjjvIiDto=
+
+Name: resources/sdk/nativeBindings/v3/Kony_SDKCommons-iOS-14.3.zip
+SHA-256-Digest: +bMurJRT0VGtaBWbpHSqnxlickIQ7qvdfaxW+u4BNxs=
+
+Name: resources/sdk/kony-js/build/voltmx_spa_filestorage.js
+SHA-256-Digest: FS0IPSNCcAv6T+PjRkrGtxfPth+a+N1K8Kq3+akeTt0=
+
+Name: resources/sdk/nativeBindings/v1/Kony_SDKCommons-Android-4.0.zip
+SHA-256-Digest: +bRyrXB2D1/+TZFUWzK6lpfk3T52lW2kDl29rc2H4bg=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Headers/KNYMetricsService.h
+SHA-256-Digest: J1hleTPPTxBRAc9V58Xg5em3gj9Eh8Lm9ZQZG+jqwFU=
+
+Name: resources/sdk/nativeBindings/v3/Kony_WebSocket-iOS-14.3.zip
+SHA-256-Digest: 4CMcWNDVScARUvp7hHLY2LOAqQgghcAWfrjrp26APsY=
+
+Name: resources/sdk/nativeBindings/v3/Kony_FileStorage-iOS-14.3.zip
+SHA-256-Digest: 6v3eZ9cm2CNVWzpk0RzAXUCCMA1r+YZmPGa0Wxp2gVU=
+
+Name: resources/sdk/vizconfigurations/SSOManifestTagsREAD_ME.txt
+SHA-256-Digest: 4uceR3nPZet1VqMrIeC4Xy0O0wn0VCFC3NyAV6cOTW4=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Headers/KNYCMSClient.h
+SHA-256-Digest: I72tOK8Hf4nZR1kZ01nRNJifDkIittSdVygJsPPcHfM=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Headers/KNYMetricsServiceConstants.h
+SHA-256-Digest: D0syPi9ToPrFYdlBMoOZLwpX0I0B3Omqbig3XPhMWpQ=
+
+Name: resources/sdk/nativeBindings/v2/Kony_SyncV2-Android-4.0.zip
+SHA-256-Digest: I/qzV0C7XXIl3Qgf5htVbD46O8rU8XhtR984GnRNxlY=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Headers/KNYCMSClient.h
+SHA-256-Digest: E+vKlz3Nkvt+JwAMPnLjlep4h+ml9VvPxHhIYWQEX6c=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/Info.plist
+SHA-256-Digest: fTp7dHi3d9l71mR+8EbeNGtnebtVWGfI4FnSSHnVWqg=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/PrivacyInfo.xcprivacy
+SHA-256-Digest: 11azEnK6mmZBTmsI3LomuBEK5M/zro1mmZo7HJPvgyY=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64/CMS.framewo
+ rk/PrivacyInfo.xcprivacy
+SHA-256-Digest: 93LXndiXx+Jv0W+SqV2HV2OnT60CZGGLPqr7zrhdZng=
+
+Name: resources/sdk/nativeBindings/v2/Kony_WebSocket-Android-4.0.zip
+SHA-256-Digest: hW0Hf5PbE7VTFZEZq20Jj1b3sHkRI5sz7JCK9yypiDk=
+
+Name: resources/sdk/nativeBindings/v1/Kony_SyncV2-Android-4.0.zip
+SHA-256-Digest: AeQAMAu/ZL9kySuXJVgukLDDKTcuo5VW97w+2IkI0LA=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Headers/KNYCMSDefaultPersistentStore.h
+SHA-256-Digest: lWRxMX2BZIbi76p1HUqJhaV5rywkZvgqNdsGbJSGzac=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/Info.plist
+SHA-256-Digest: q6tO1LNXMjHcPLVEUBcTEWNV2ghVXHqrNSCHREGttRs=
+
+Name: resources/sdk/sharedLibs/iOS/CMS.xcframework/ios-arm64_x86_64-simu
+ lator/CMS.framework/_CodeSignature/CodeResources
+SHA-256-Digest: TebLCnn5V2G3k7G/n7OZ73mFJtZ4BElHZbAiv3ou//s=
+
+Name: resources/sdk/kony-js/build/sso_ffi.zip
+SHA-256-Digest: mCtVc1iR85CJ386eeirXnBnOugvlOCwvJgj3qgq38ww=
+
+Name: resources/sdk/nativeBindings/v2/Kony_SDKCommons-Android-4.0.zip
+SHA-256-Digest: JhhAK/FGAYNd+HfKipDUrl4eDudPKdonNajCngcw+4s=
+

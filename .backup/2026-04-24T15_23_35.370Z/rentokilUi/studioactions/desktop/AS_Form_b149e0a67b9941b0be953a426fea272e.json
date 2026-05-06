@@ -1,0 +1,130 @@
+{
+    "AS_Form_b149e0a67b9941b0be953a426fea272e": {
+        "id": "AS_Form_b149e0a67b9941b0be953a426fea272e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form1",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ge157d15db964749ba5db5b484a747d3"
+        },
+        "language": "js",
+        "eventType": "onMapping",
+        "actions": [{
+            "id": "LOADING_INDICATOR_f2efe76c06714de5b4d11ddc09b05fda",
+            "selectedOption": "show",
+            "disabled": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_IDENTITY_SERVICE_i794ca221eb84c79bbcdabdae152241c",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {
+                "ME_Mapping_c49c7f56387448478c89f010331110d2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c49c7f56387448478c89f010331110d2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtUserName",
+                        "widgetPath": "this.view.txtUserName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form1",
+                        "widgetKUID": "c327f73e69a34eee9ead27635c62ae8f",
+                        "itemKUID": "ge157d15db964749ba5db5b484a747d3",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "userid",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "authService",
+                            "type": "identity",
+                            "operationname": "login",
+                            "serviceid": "8436e43a-f261-48d8-a66f-c0b39d330dc0",
+                            "login_type": "basic"
+                        }
+                    }
+                },
+                "ME_Mapping_ie26352c1ca741078ca244858b567e9f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ie26352c1ca741078ca244858b567e9f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtPassword",
+                        "widgetPath": "this.view.txtPassword",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form1",
+                        "widgetKUID": "d79b616c033349e38ea50694d6423dcf",
+                        "itemKUID": "ge157d15db964749ba5db5b484a747d3",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "password",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "authService",
+                            "type": "identity",
+                            "operationname": "login",
+                            "serviceid": "8436e43a-f261-48d8-a66f-c0b39d330dc0",
+                            "login_type": "basic"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_c49c7f56387448478c89f010331110d2", "ME_Mapping_ie26352c1ca741078ca244858b567e9f"],
+            "serviceconfig": {
+                "servicename": "authService",
+                "type": "identity",
+                "operationname": "login",
+                "serviceid": "8436e43a-f261-48d8-a66f-c0b39d330dc0",
+                "login_type": "basic"
+            },
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }, {
+            "id": "LOADING_INDICATOR_eb88a1aab83b400689571e4b106c846a",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_IDENTITY_SERVICE_i794ca221eb84c79bbcdabdae152241c",
+            "disabled": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Success",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "LOADING_INDICATOR_c159fa60070048d1b3dd2808c821a4b2",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_IDENTITY_SERVICE_i794ca221eb84c79bbcdabdae152241c",
+            "disabled": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Failure",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

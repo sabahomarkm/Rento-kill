@@ -1,0 +1,50 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.8
+Created-By: 1.8.0_261-b12 (Oracle Corporation)
+Bundle-SymbolicName: com.hcl.formula.sdk
+Bundle-Name: Volt MX Go Formula
+Bundle-Version: 10.0.0.v202508011402
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Bundle-ManifestVersion: 2
+Bundle-Vendor: HCL America, Inc.
+Eclipse-LazyStart: true
+
+Name: formula_sample.json
+SHA-256-Digest: jpoaT5j8l9xyxHJSYUJ2SO2eHO7ZDjFXwxKzsP5HeDk=
+
+Name: rosetta_api_tern.json
+SHA-256-Digest: hxy1VadtSu6Gp7wrRdib+iFvO4WHqMlFf9oKAEB7jT4=
+
+Name: notes_formula_tern.json
+SHA-256-Digest: 719daeADDcEPUo0rpLeqHklMJ/tVltz39rUv6tH0vAM=
+
+Name: open_formula_tern.json
+SHA-256-Digest: kfii9JLO2azU2ri/ofbGaIOUFWwKvvTiN4Zm5FOODr4=
+
+Name: version.html
+SHA-256-Digest: F6LcYODPiuQbZXFXpwPutpLYS5aGMxLaRLyweRXjwQw=
+
+Name: voltmx_rosetta_api.js
+SHA-256-Digest: rjTG4YQ1AxgFwL2qMUXXLSX9XErgDW5KnYK08uBWCiw=
+
+Name: buildNumber.json
+SHA-256-Digest: 52ER9/v5yN0YvhFn7cea02P+unisIYKnRia5pj0h3S0=
+
+Name: voltmx_rosetta.js
+SHA-256-Digest: HeIvPRWVAqIAK8gjIHE1vDlKGgVa6Vu/eHq+960VGYY=
+
+Name: docVersion.json
+SHA-256-Digest: ewSm3CJ8eOvRVVk2JJfeRJBS3TrTiU3QGfn7iPqyrII=
+
+Name: api_dictionaries.json
+SHA-256-Digest: ADQ3FVAceZxRt7bMR7nTmJYvLtoseKWXDPbdmHD46e0=
+
+Name: rosettaSeeLinks.json
+SHA-256-Digest: IBN3BBSxjn6fMNCPIDXbV4eRu18F4/S1NpsZwF8uorw=
+
+Name: package.json
+SHA-256-Digest: GyZAzeLrGQ4GsNvaPDCavV8SM9r1HmbyEkiobDcv63c=
+
+Name: voltmx_rosetta_prettifier.js
+SHA-256-Digest: n0flPp+f/5xhFwCLKtoBR3fRhWKkuuAIj05FauyHECI=
+

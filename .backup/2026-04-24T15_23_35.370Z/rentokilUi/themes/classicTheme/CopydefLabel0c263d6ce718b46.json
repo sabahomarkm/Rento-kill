@@ -1,0 +1,196 @@
+{
+  "android": {
+    "font_name": "default"
+  },
+  "androidwearos": {
+    "font_name": "default"
+  },
+  "background_color": "00000000",
+  "bg_type": "one",
+  "border_color": "14A1DEff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "font_color": "212121ff",
+  "font_name": "iphoneSystem",
+  "font_size": 200,
+  "font_style": "normal",
+  "font_weight": "400",
+  "ipad": {
+    "font_name": "System"
+  },
+  "iphone": {
+    "font_name": "System"
+  },
+  "isDefaultSkin": false,
+  "kiosk": {
+    "font_name": "Helvetica"
+  },
+  "kuid": "s9827fdf622042228e88328ac41d4edb",
+  "nativemac": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "nativewin": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "spaan": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "spaandroidtablet": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "spaip": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "spaipad": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "spawindowstablet": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "spawinphone8": {
+    "bottom_left_border_color": "14A1DEff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "14A1DEff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "14A1DEff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "14A1DEff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
+  "tabrcandroid": {
+    "font_name": "default"
+  },
+  "wType": "Label",
+  "watchos": {
+    "font_name": "System"
+  },
+  "windows8": {
+    "font_name": "None"
+  },
+  "winphone8": {
+    "font_name": "None"
+  }
+}

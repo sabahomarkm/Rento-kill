@@ -1,0 +1,108 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizDateField",
+    "DNDConfig": null,
+    "Image": "calbtn.png",
+    "__id": "Form2_Calendar0b685aef7fd454a",
+    "__input": "Calendar0b685aef7fd454a",
+    "_data_": null,
+    "_date_": [
+        24,
+        4,
+        2026
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "27dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "122dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s5367b1f2f33477f9cae7be330da0f76",
+    "_top_": {
+        "type": "string",
+        "value": "305dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "240dp"
+    },
+    "advview": "default",
+    "calendaricon": "calbtn.png",
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "datecomponents": [
+        24,
+        4,
+        2026
+    ],
+    "dateeditable": true,
+    "dateformat": "dd/MM/yyyy",
+    "datesGroup": [],
+    "datesState": 0,
+    "day": 24,
+    "daytextalignmentincell": 5,
+    "displayedMonths": [
+        4,
+        2026
+    ],
+    "entereddate": "24/04/2026",
+    "format": "dd/MM/yyyy",
+    "formatteddate": "24/04/2026",
+    "hidedaysheader": false,
+    "hidemonthsheader": false,
+    "hour": 0,
+    "id": "Calendar0b685aef7fd454a",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "be4e1d54564d4b42b5bb92be16368065",
+    "luadate": [
+        24,
+        4,
+        2026
+    ],
+    "minutes": 0,
+    "month": 4,
+    "monthsinrow": 3,
+    "name": "kony.ui.Calendar",
+    "navigatorAlert": "Invalid Selection",
+    "noofmonths": 1,
+    "pagedate": "/2026",
+    "parent": "FlexContainer0b710f38ad44c49",
+    "pf": "Form2",
+    "popupHeight": "auto",
+    "popupWidth": "auto",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "seconds": 0,
+    "selectdate": "//2026",
+    "startDay": 0,
+    "viewtype": "default",
+    "wType": "Calendar",
+    "widgetalignment": 5,
+    "widths": [
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;"
+    ],
+    "year": 2026,
+    "zindex": 1
+}

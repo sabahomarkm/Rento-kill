@@ -1,0 +1,82 @@
+<!--@Note: This is read only file and not being used at runtime,if we want to update anything do it in zip file \trunk\guieditor\lib\build.zip --> 
+<project name="Kony" basedir="." default="build">
+   
+	<target name="build">
+		<echo message= "${codedir}"/>
+		<echo message= "${outputdir}"/>
+		<unset name="logo"/>
+		<var name="logo" value="${logo_AndroidWearos}"/>
+		<unset name="splash.image"/>
+		
+		<delete dir="${codedir}" failonerror="false"/>
+		<mkdir dir="${codedir}"/>
+				<if>
+					<equals arg1="${androidwearos}" arg2="true"/>
+					<then>
+						<copy todir="${codedir}" overwrite="true">
+				   		    <fileset dir="../../${outputdir}/${codedir}/androidwear" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+																				
+				   	 	</copy>
+					<createAndCopyToLuasrc dir.name="androidwearos" m4constant.name="m4androidwearos" startup.luadir="/androidwear"/>
+												<if>
+													<equals arg1="${dev.language}" arg2="lua"/>
+													<then>
+														<exec executable="cmd.exe" failonerror="true" failifexecutionfails="true">
+															<env key="PATH" path="${env.PATH};${appfolder}/build/luacompiler"/>
+															<arg line='/c "luac${luaprefix} -o ${luac.file}${_debugluafile} ${project.loc}\luasrc\androidwearos\startup\rcchannel.lua ${project.loc}\luasrc\androidwearos\nongenerated\*.lua ${project.loc}\luasrc\androidwearos\generated\*.lua ${project.loc}\luasrc\androidwearos\startup\startup.lua"'/>
+														</exec>	
+													</then>
+												</if>
+						<available file="../../${outputdir}/${codedir}/androidwear" type="dir" property="androidlua.present"/>
+						<if>
+							<equals arg1="${androidlua.present}" arg2="true" />
+							<then>
+								<copy todir="${codedir}" overwrite="true">
+						     		<fileset dir="../../${outputdir}/${codedir}/androidwear" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+					    		</copy>
+							</then>
+						</if>
+					</then>
+					<else>
+						<copy todir="${codedir}" overwrite="true">
+				   		    <fileset dir="../../${outputdir}/${codedir}wrapper" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+				   	 	</copy>
+						<available file="../../${outputdir}/${codedir}wrapper/androidwear" type="dir" property="wrapperandroidlua.present"/>
+						<if>
+							<equals arg1="${wrapperandroidlua.present}" arg2="true" />
+							<then>
+								<copy todir="${codedir}" overwrite="true">
+						     		<fileset dir="../../${outputdir}/${codedir}wrapper/androidwear" excludes="startup.lua,tcchannel.lua,rcchannel.lua" casesensitive="false"/>
+					    		</copy>
+							</then>
+						</if>
+					</else>
+		</if>
+
+		<delete dir="androidwearos"/>
+		<mkdir dir="androidwearos"/>
+		<mkdir dir="androidwearos/temp"/>
+		<delete dir ="resources"/>
+		<mkdir dir="resources"/>
+		
+        <available file="${fonts_workspace}/Android Wear OS" type="dir" property="androidwearos.workspacefonts.present" /> 
+        <if>
+            <equals arg1="${androidwearos.workspacefonts.present}" arg2="true" /> 
+            <then>
+                <copy todir="resources" overwrite="true">
+                    <fileset dir="${fonts_workspace}/Android Wear OS" includes="*.ttf"/>
+                </copy>
+            </then>
+        </if>
+		
+        <available file="${resfolder}/fonts/Android Wear OS" type="dir" property="androidwearos.fonts.present" /> 
+        <if>
+            <equals arg1="${androidwearos.fonts.present}" arg2="true" /> 
+            <then>
+                <copy todir="${resfolder}" overwrite="true">
+                    <fileset dir="${resfolder}/fonts/Android Wear OS" includes="*.ttf"/>
+                </copy>
+            </then>
+        </if>
+	</target>
+</project>

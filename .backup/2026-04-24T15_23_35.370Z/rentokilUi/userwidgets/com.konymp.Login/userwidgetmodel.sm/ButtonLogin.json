@@ -1,0 +1,71 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "40dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "77dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s774d29df32d4e268a88771e412364b6",
+    "_text_": "Login",
+    "_top_": {
+        "type": "string",
+        "value": "15dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "346dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "psp": {
+            "hoverSkin": "sfc77c314e8640a2b7f7614187ca7d72"
+        }
+    },
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "sfc77c314e8640a2b7f7614187ca7d72",
+    "id": "ButtonLogin",
+    "ide_onClick": "AS_Button_e97bf980d28c40d18193b23c5b59fe1e",
+    "info": null,
+    "iphone": {
+        "centerX": {
+            "type": "string",
+            "value": "50.00%"
+        },
+        "width": {
+            "type": "string",
+            "value": "90%"
+        }
+    },
+    "isvisible": true,
+    "kuid": "u594131edbb848c7a6875c33decf8a9a",
+    "masterType": 1,
+    "name": "kony.ui.Button",
+    "parent": "flxLoginWrapper",
+    "pf": "userwidgetmodel",
+    "wType": "Button",
+    "zindex": 1
+}

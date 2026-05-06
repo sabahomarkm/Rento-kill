@@ -1,0 +1,24 @@
+{
+    "AS_TextField_a22caf24b87b4208a5510675b2fbb249": {
+        "id": "AS_TextField_a22caf24b87b4208a5510675b2fbb249",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_a142fb379a7e44edbe7cf5fac0761a23",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "userType",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "txtuserType"
+        }]
+    }
+}

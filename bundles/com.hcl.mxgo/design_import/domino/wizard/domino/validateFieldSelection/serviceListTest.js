@@ -1,0 +1,1 @@
+define([],function(){return[{servicename:"MXGOjuly41151_demogascope",type:"objectsvcs",objectname:"SampleForm",serviceid:"a960f545-126d-4f89-88e9-6a36b6cbd52d",objectid:"4883"},{servicename:"MXGOjuly41151_demogascope",type:"objectsvcs",objectname:"Samples",serviceid:"a960f545-126d-4f89-88e9-6a36b6cbd52d",objectid:"4884"}]});

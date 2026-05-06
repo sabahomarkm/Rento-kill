@@ -1,0 +1,21 @@
+
+Tracing dependencies for: sparequirefileslist
+
+C:/Users/omars/Iris/workspace/temp/rentokilUi/jsoutput/desktopweb/appjs/kvmodules.js
+----------------
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/applicationController.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/com/konymp/Login/LoginController.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/com/konymp/Login/Login.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/com/viz/Header1/Header1Controller.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/com/viz/Header1/Header1.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/servicepage/servicePage/servicePageController.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/servicepage/servicePage/servicePage.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/servicepage/servicePage/servicePageConfig.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/flxSampleRowTemplate.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/flxSectionHeaderTemplate.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/flxSampleRowTemplateController.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/flxSectionHeaderTemplateController.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/navigation/NavigationModel.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/navigation/NavigationController.js
+C:/Users/omars/Iris/workspace/rentokilUi/jssrc/desktopweb/require/sparequirefileslist.js
+

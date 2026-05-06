@@ -1,0 +1,24 @@
+{
+    "AS_TextField_gb0a7d78219349b4b9c97d9deebd5089": {
+        "id": "AS_TextField_gb0a7d78219349b4b9c97d9deebd5089",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_i41cabd2ebbe41f7a30a68b377891568",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "address",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "txtAddress"
+        }]
+    }
+}

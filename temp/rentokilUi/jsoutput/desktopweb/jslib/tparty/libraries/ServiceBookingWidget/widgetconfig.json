@@ -1,0 +1,33 @@
+{
+  "widgetName": "ServiceBookingWidget",
+  "widgetDisplayName": "Service Booking Widget",
+  "widgetVersion": "1.0.0",
+  "author": "Rentokil",
+  "description": "Service booking form widget for Rentokil pest control portal",
+  "supportedPlatforms": ["desktop_web", "responsive_web"],
+  "jsFileName": "widget.js",
+  "cssFileName": "widget.css",
+  "htmlFileName": "index.html",
+  "events": [
+    {
+      "name": "onBookService",
+      "description": "Triggered when user clicks Book Service button"
+    },
+    {
+      "name": "onCancel",
+      "description": "Triggered when user clicks Cancel button"
+    },
+    {
+      "name": "onLogout",
+      "description": "Triggered when user clicks Logout button"
+    }
+  ],
+  "properties": [
+    {
+      "name": "userName",
+      "displayName": "User Name",
+      "type": "string",
+      "defaultValue": "User"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "AS_TextField_a28d55e44f554f86b7bbd3ca6a35f520": {
+        "id": "AS_TextField_a28d55e44f554f86b7bbd3ca6a35f520",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "Form1",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ge157d15db964749ba5db5b484a747d3"
+        },
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_jac91f00afec42b49f9222256b8302b2",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "userPassword",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "txtUserPassword"
+        }]
+    }
+}

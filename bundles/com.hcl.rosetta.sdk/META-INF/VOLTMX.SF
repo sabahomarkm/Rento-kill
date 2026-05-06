@@ -1,0 +1,45 @@
+Signature-Version: 1.0
+Created-By: 11.0.2 (Oracle Corporation)
+SHA-256-Digest-Manifest: Tb9vzne5NZZ6Lf4RjagqXZeffCqd6P2+QJmnx+eus3s=
+SHA-256-Digest-Manifest-Main-Attributes: QmV3ffkVRPEeQGfvEQIahCVFchauhEX
+ iyROOOBvQIoA=
+
+Name: formula_sample.json
+SHA-256-Digest: 4GUGWK8cmk9acaXg8LneJB4I1VeyKwKn5XAdgX1c5ys=
+
+Name: rosetta_api_tern.json
+SHA-256-Digest: Y7l6tD++lI2G6JRWFku4VlksyncUW7PXa1CgXSN1PzQ=
+
+Name: notes_formula_tern.json
+SHA-256-Digest: fwa+ChmZOHTJF40GnU2KKb6vb6D1L23K2C4fH+kmfPE=
+
+Name: open_formula_tern.json
+SHA-256-Digest: lIedxcszyCoNCC5DVTSyht1rFfsEbbzWlFboJPYx3Fk=
+
+Name: version.html
+SHA-256-Digest: Lr1Hy0qbXS4QBsFdQbyCJ7mXpG6eOpfmSLimY6uPZi8=
+
+Name: voltmx_rosetta_api.js
+SHA-256-Digest: Jb0j9o5FvY10VNo3/OGbQ4VjY2+qYQTuiAW9bhXowEk=
+
+Name: buildNumber.json
+SHA-256-Digest: LLlQvtQqwpSyQCZ03+p4EXqwJ+QkWiUVMJHYzgYmqFQ=
+
+Name: voltmx_rosetta.js
+SHA-256-Digest: a+A8s9AHLLp88aIkkEwLcjjDwzN0LguhH4Lma5vjfB4=
+
+Name: docVersion.json
+SHA-256-Digest: 6bxggIE0P8bXrtJOjAg4BKKXFav2hd0cv+XEalwc5qA=
+
+Name: api_dictionaries.json
+SHA-256-Digest: d8eEVGjVrL0hAhFv3Bxx87ZrHfj0ZoeW7/A4UMNILsw=
+
+Name: rosettaSeeLinks.json
+SHA-256-Digest: SzDCPJ9r2kWBde+yTyNkZe+JbJd1U0W7ltbv12XgtRQ=
+
+Name: package.json
+SHA-256-Digest: KdhM0ZdVKsiX2fXvBKT8N2pauT/ftIjomD+ONTVBqig=
+
+Name: voltmx_rosetta_prettifier.js
+SHA-256-Digest: h9C5q9KV+cldogFJNG8tz12Fm/mSLS3kJKo5yXhBiVY=
+

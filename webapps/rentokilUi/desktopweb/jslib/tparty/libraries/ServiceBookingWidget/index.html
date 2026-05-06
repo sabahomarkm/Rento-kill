@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="widget.css"/>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-text">Rentokil</div>
+    <nav class="site-nav">
+      <button class="nav-link">Home</button>
+      <button class="nav-link">About Us</button>
+      <button class="nav-link">Careers</button>
+      <button class="btn-logout" onclick="handleLogout()">Logout</button>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-badge">Pest Management Portal</div>
+    <h1>Book Your <span>Pest Control</span> Service</h1>
+    <p>Fast, professional, and certified pest control services. Fill in the form below to get started.</p>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-section">
+    <div class="form-card">
+      <div class="form-card-header">
+        <h2>Book a Service</h2>
+        <span>All fields are required</span>
+      </div>
+
+      <div class="form-body">
+        <div class="field">
+          <label>Service</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option value="rodent">Rodent Control</option>
+            <option value="insect">Insect Control</option>
+            <option value="bird">Bird Management</option>
+            <option value="disinfection">Disinfection</option>
+            <option value="termite">Termite Control</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Type</label>
+          <select id="type">
+            <option value="">Select type...</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="industrial">Industrial</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Service Date</label>
+          <input type="date" id="serviceDate"/>
+        </div>
+
+        <div class="field">
+          <label>Name</label>
+          <input type="text" id="name" placeholder="Your full name"/>
+        </div>
+
+        <div class="field">
+          <label>Address</label>
+          <input type="text" id="address" placeholder="Service location address"/>
+        </div>
+
+        <div class="error-msg" id="formError">
+          Please fill in all fields before submitting.
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <button class="btn-cancel" onclick="handleCancel()">Cancel</button>
+        <button class="btn-book" onclick="handleSubmit()">Book Service</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="copy">© 2025 <span>Rentokil</span> Pest Solutions. All rights reserved.</div>
+    <div class="links">
+      <a>Privacy Policy</a>
+      <a>Terms of Use</a>
+      <a>Contact Us</a>
+    </div>
+  </footer>
+
+</div>
+
+<script src="widget.js"></script>
+</body>
+</html>

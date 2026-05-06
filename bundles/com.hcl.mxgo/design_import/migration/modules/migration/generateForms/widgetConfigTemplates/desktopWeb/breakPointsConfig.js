@@ -1,0 +1,1 @@
+function getBreakpointsResponsiveData(e,t){var o={};_.each(e,(e,a)=>{if(t[a]){e.forEach(e=>o[e.kuid]=t[a])}});return o}module.exports={getBreakpointsResponsiveData:getBreakpointsResponsiveData};

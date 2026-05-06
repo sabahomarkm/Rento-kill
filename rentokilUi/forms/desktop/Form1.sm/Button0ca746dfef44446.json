@@ -1,0 +1,60 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "50dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "130dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sc2b62b34e8349aba1f4dd2e43cb5411",
+    "_text_": "Login",
+    "_top_": {
+        "type": "string",
+        "value": "240dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "300dp"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "psp": {}
+    },
+    "disabledSkins": {
+        "blockedUISkin": "sad650e3b554410cb830f137fe29d4c9",
+        "focusSkin": "sb87a21ea2ed479690891fe27e38fa07",
+        "hoverSkin": "se74847feeb24297bc2c74b4ce97179b",
+        "pressedSkin": "se7a1b37f11b4bf5828530c358dac47d"
+    },
+    "displaytext": true,
+    "id": "Button0ca746dfef44446",
+    "ide_onClick": "AS_Button_cffc8bcf540d4bca8829ea3dbd05bb6a",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "gef3a32ec8d940c796c324d82f4a53f4",
+    "name": "kony.ui.Button",
+    "parent": "FlexContainer0d3e864d3a0be4b",
+    "pf": "Form1",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

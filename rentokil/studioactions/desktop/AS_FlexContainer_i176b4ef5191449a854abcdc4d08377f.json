@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_i176b4ef5191449a854abcdc4d08377f": {
+        "id": "AS_FlexContainer_i176b4ef5191449a854abcdc4d08377f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form1",
+            "type": "forms",
+            "platform": "",
+            "KUID": "h62f20809f264b4890d5afe684f709ca"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_fa2ca2ee978142b7aa8d10cc221d7075",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "address",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "txtAddress"
+        }]
+    }
+}

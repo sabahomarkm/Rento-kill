@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Build file for generating a WAR file from Web build  -->
+<project name="PackageAsPortlet" basedir=".">
+    <property name="projectName" value="${appname}"/>
+    <property name="projectId" value="${appid}"/>
+    <property name="workspaceLocation" value="${workspace.loc}"/>
+    <property name="binariesFolder" value="${workspaceLocation}/${projectName}/binaries"/>
+    <property name="generatedClientCode" value="${workspaceLocation}/temp/${projectName}/build/wap/build"/>
+    <property name="portletFolder" value="${generatedClientCode}/${projectName}Portlet"/>
+    <property name="warFilePathDestination" value="${binariesFolder}/TXArtifacts"/>
+    <property name="zipFileNamePath" value="${generatedClientCode}/${projectName}.zip"/>
+    <property name="zipFileIdPath" value="${generatedClientCode}/${projectId}.zip"/>
+    <property name="metaFilePath" location="${unzipFolderPath}/meta.json"/>
+    <property name="warFilePathSource" value="${portletFolder}/target/${projectName}Portlet-1.0-SNAPSHOT.war"/>
+    <property name="portletPublishScripts" value="${portletFolder}/scripts"/>
+    <property name="konywebstudioLocation" value="${konywebstudio.loc}"/>
+    <property name="archetypeID" value="hcl_mx_archetype"/>
+
+    <echo message="Project Name: ${projectName}"/>
+    <echo message="Binaries Folder: ${binariesFolder}"/>
+    <echo message="Portlet Folder: ${portletFolder}"/>
+
+    <target name="cleanPortletFolder">
+        <delete dir="${portletFolder}"/>
+    </target>
+
+    <!-- New target to run 'mvn install' in the required folder -->
+    <target name="runMavenInstallInPortletArchetype">
+        <!-- Set the folder path dynamically -->
+        <property name="portletArchetypePath" value="${workspaceLocation}/temp/${projectName}/build/wap/TXTemplate/${archetypeID}"/>
+
+        <!-- Run 'mvn install' inside the specified folder -->
+        <exec executable="${mavenPath}" dir="${portletArchetypePath}" failonerror="true" output="mvn-install-output.log" error="mvn-install-error.log">
+            <arg value="install"/>
+        </exec>
+
+        <echo message="Maven install completed in ${portletArchetypePath}."/>
+        <echo message="Maven output logged to mvn-install-output.log"/>
+        <echo message="Maven error logged to mvn-install-error.log"/>
+    </target>
+
+    <target name="generateArchetype">
+        <exec executable="${mavenPath}" dir="${generatedClientCode}" failonerror="true" output="portlet-build-output.log" error="portlet-build-error.log">
+            <arg value="org.apache.maven.plugins:maven-archetype-plugin:3.1.2:generate"/>
+            <arg value="-DarchetypeArtifactId=${archetypeID}"/>
+            <arg value="-DarchetypeGroupId=com.hcl.mx.base"/>
+            <arg value="-DarchetypeVersion=1.0"/>
+            <arg value="-DgroupId=com.hcl.mx"/>
+            <arg value="-DartifactId=${projectName}Portlet"/>
+            <arg value="-DoutputDirectory=${generatedClientCode}"/>
+        </exec>
+
+        <echo message="Maven output logged to mvn-output.log"/>
+        <echo message="Maven error logged to mvn-error.log"/>
+        <echo message="Portlet generated in ${generatedClientCode}."/>
+    </target>
+
+    <target name="copyAndRenameJSP">
+        <!-- Define the source and destination paths -->
+        <copy file="${workspaceLocation}/.webapps/${projectName}/spageneratedfiles/desktopweb/index.jsp" tofile="${portletFolder}/src/main/webapp/_base/jsp/html/main.jsp" overwrite="true"/>
+
+        <!-- Echo message to confirm the action -->
+        <echo message="index.jsp has been copied and renamed to ${portletFolder}/src/main/webapp/_base/jsp/html/main.jsp"/>
+    </target>
+
+    <target name="updatePropertiesFiles">
+        <copy file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource_en.properties" tofile="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource_en.properties.bak"/>
+        <copy file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource.properties" tofile="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource.properties.bak"/>
+        <replaceregexp file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource_en.properties" match="javax.portlet.title=.*" replace="javax.portlet.title=${projectName}"/>
+        <replaceregexp file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource.properties" match="javax.portlet.title=.*" replace="javax.portlet.title=${projectName}"/>
+        <replaceregexp file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource_en.properties" match="javax.portlet.short-title=.*" replace="javax.portlet.short-title=${projectName} Short Title"/>
+        <replaceregexp file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource.properties" match="javax.portlet.short-title=.*" replace="javax.portlet.short-title=${projectName} Short Title"/>
+        <replaceregexp file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource_en.properties" match="javax.portlet.keywords=.*" replace="javax.portlet.keywords=NewDemoPortlet_Keyword"/>
+        <replaceregexp file="${portletFolder}/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletResource.properties" match="javax.portlet.keywords=.*" replace="javax.portlet.keywords=NewDemoPortlet_Keyword"/>
+    </target>
+
+    <target name="unzipFile">
+        <condition property="selectedZipFilePath" value="${zipFileNamePath}">
+            <and>
+                <isset property="zipFileNamePath"/>
+                <available file="${zipFileNamePath}"/>
+            </and>
+        </condition>
+        <condition property="selectedZipFilePath" value="${zipFileIdPath}">
+            <and>
+                <not><isset property="selectedZipFilePath"/></not>
+                <isset property="zipFileIdPath"/>
+                <available file="${zipFileIdPath}"/>
+            </and>
+        </condition>
+
+        <echo message="Unzipping file from: ${selectedZipFilePath}"/>
+
+        <unzip src="${selectedZipFilePath}" dest="${unzipFolderPath}" overwrite="true"/>
+        
+        <loadfile property="metaContent" srcFile="${metaFilePath}" />
+
+        <!-- Use regex to extract the cacheId from the JSON -->
+        <propertyregex property="cacheId"
+               input="${metaContent}"
+               regexp='"cacheId"\s*:\s*"([^"]+)"'
+               select="\1" />
+           
+        <!-- Echo the extracted cacheId to verify -->
+        <echo message="Extracted cacheId: ${cacheId}"/>
+
+        <!-- Construct the clientCode path -->
+        <property name="clientCode" value="${unzipFolderPath}/${cacheId}" />
+
+        <echo message="Client code path: ${clientCode}"/>
+    </target>
+
+    <!-- Copy folders from clientCode to the target webapp directory -->    
+    <target name="copyClientCode">
+        <echo message="Copying client code (desktopweb folder) to the target webapp directory..."/>
+        <copy todir="${portletFolder}/src/main/webapp">
+            <!-- Copy the entire desktopweb folder -->
+            <fileset dir="${clientCode}" includes="desktopweb/**"/>
+        </copy>
+    </target>
+
+    <target name="packageWar">
+        <echo message="Starting Maven package..."/>
+        <echo message="Maven executable path: /opt/homebrew/bin/mvn"/>
+        <echo message="POM file path: ${portletFolder}/pom.xml"/>
+
+        <exec executable="${mavenPath}" failonerror="true" output="mvn-output.log" error="mvn-error.log">
+            <arg value="package"/>
+            <arg value="-f"/>
+            <arg value="${portletFolder}/pom.xml"/>
+        </exec>
+
+        <echo message="Maven output logged to mvn-output.log"/>
+        <echo message="Maven error logged to mvn-error.log"/>
+        <echo message="Packaging the WAR file completed."/>
+    </target>
+
+    <target name="moveWarFile">
+        <mkdir dir="${warFilePathDestination}"/>
+        <move file="${warFilePathSource}" todir="${warFilePathDestination}"/>
+        <echo message="WAR file moved to ${warFilePathDestination}."/>
+        
+        <echo message="Portlet publish scripts path: ${portletPublishScripts}"/>
+        <copy todir="${warFilePathDestination}">
+            <fileset dir="${portletPublishScripts}" includes="**"/>
+        </copy>
+        <echo message="Portlet publish scripts copied to ${warFilePathDestination}."/>
+    </target>
+
+    <target name="cleanBuilds">
+        <delete dir="${portletFolder}"/>
+        <delete dir="${unzipFolderPath}"/>
+    </target>
+
+    <target name="execute" depends="runMavenInstallInPortletArchetype, cleanPortletFolder, generateArchetype, copyAndRenameJSP, updatePropertiesFiles, unzipFile, copyClientCode, packageWar, moveWarFile, cleanBuilds">
+        <echo message="Build process completed successfully!"/>
+    </target>
+</project>

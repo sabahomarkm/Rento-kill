@@ -1,0 +1,50 @@
+{
+  "type" : "lob",
+  "custom" : false,
+  "junction" : false,
+  "customizable" : false,
+  "verbs" : {
+    "get" : "getMapping",
+    "update" : "updateMapping",
+    "create" : "createMapping",
+    "delete" : "deleteMapping"
+  },
+  "entityProperties" : {
+    "BatchMode" : "pagination",
+    "backendMeta" : {
+      "backendObjectName" : "rentokil",
+      "qualifiedName" : "railway.rentokil",
+      "metadataformatterobject" : "{\"displayName\":\"rentokil\",\"qualifiedName\":\"railway.rentokil\",\"entityType\":\"com.kony.rdbms.metadata.model.AnnotatedTable\",\"name\":\"rentokil\",\"schemaName\":\"railway\",\"tableName\":\"rentokil\"}"
+    },
+    "designTimeBackendMeta" : {
+      "backendObjectName" : "rentokil",
+      "qualifiedName" : "railway.rentokil",
+      "metadataformatterobject" : "{\"displayName\":\"rentokil\",\"qualifiedName\":\"railway.rentokil\",\"entityType\":\"com.kony.rdbms.metadata.model.AnnotatedTable\",\"name\":\"rentokil\",\"schemaName\":\"railway\",\"tableName\":\"rentokil\"}"
+    }
+  },
+  "commonMappings" : [ {
+    "sourceFieldName" : "date",
+    "targetField" : "date",
+    "type" : "request_response"
+  }, {
+    "sourceFieldName" : "address",
+    "targetField" : "address",
+    "type" : "request_response"
+  }, {
+    "sourceFieldName" : "service",
+    "targetField" : "service",
+    "type" : "request_response"
+  }, {
+    "sourceFieldName" : "name",
+    "targetField" : "name",
+    "type" : "request_response"
+  }, {
+    "sourceFieldName" : "id",
+    "targetField" : "id",
+    "type" : "request_response"
+  }, {
+    "sourceFieldName" : "type",
+    "targetField" : "type",
+    "type" : "request_response"
+  } ]
+}

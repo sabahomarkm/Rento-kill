@@ -1,0 +1,9 @@
+{
+    "rentokilApiServices_rentokil": {
+        "servicename": "rentokilApiServices",
+        "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+        "type": "objectsvcs",
+        "objectname": "rentokil",
+        "objectid": "671192"
+    }
+}

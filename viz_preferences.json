@@ -1,0 +1,42 @@
+{
+    "FP": {
+        "spabb": false,
+        "winphone8": false,
+        "spawinphone8": false,
+        "windows8": false,
+        "spawindowstablet": false,
+        "desktopweb": true,
+        "iphone": false,
+        "spaip": false,
+        "android": false,
+        "spaan": false,
+        "ipad": false,
+        "spaipad": false,
+        "tabrcandroid": false,
+        "spaandroidtablet": false
+    },
+    "general": {
+        "urls": {
+            "konyFabricURL": "https://manage.demo-hclvoltmx.com"
+        },
+        "codeEditor": {},
+        "proxyConfig": {},
+        "remoteMACConfig": {},
+        "testRecorder": {
+            "port": 9111
+        },
+        "AllowLockManagementSettings": false
+    },
+    "build": {
+        "web": {
+            "postBuildAction": "generateWebApp",
+            "platforms": {
+                "desktopweb": true,
+                "adaptiveweb_mobile": false,
+                "adaptiveweb_tablet": false
+            }
+        }
+    },
+    "previewMode": "debug",
+    "konyVizVersion": "10.0.6.0"
+}

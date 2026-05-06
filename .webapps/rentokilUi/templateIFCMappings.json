@@ -1,0 +1,139 @@
+{
+    "controllerTemplateInfoMapping": {
+        "desktopweb": {
+            "flxSampleRowTemplateController_desktop": [
+                "flxSampleRowTemplateController"
+            ],
+            "flxSectionHeaderTemplateController_desktop": [
+                "flxSectionHeaderTemplateController"
+            ]
+        }
+    },
+    "controllerformInfoMapping": {
+        "desktopweb": {
+            "Form1Controller_desktop": [
+                "Form1Controller"
+            ],
+            "Form2Controller_desktop": [
+                "Form2Controller"
+            ],
+            "Form3Controller_desktop": [
+                "Form3Controller"
+            ]
+        }
+    },
+    "formControllerInfoMapping": {
+        "desktopweb": {
+            "Form1": {
+                "controllerActionDir": "Form1Controller",
+                "controllerChannel": "desktop",
+                "controllerName": "Form1Controller"
+            },
+            "Form2": {
+                "controllerActionDir": "Form2Controller",
+                "controllerChannel": "desktop",
+                "controllerName": "Form2Controller"
+            },
+            "Form3": {
+                "controllerActionDir": "Form3Controller",
+                "controllerChannel": "desktop",
+                "controllerName": "Form3Controller"
+            }
+        }
+    },
+    "formsifcMapping": {
+        "desktopweb": {
+            "Form1": {
+                "ControllerExtensions": [],
+                "appName": "rentokilUi",
+                "controllerInfo": {
+                    "controllerActionName": "Form1Controller",
+                    "controllerChannel": "desktop",
+                    "controllerName": "Form1Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form1",
+                "isMDAForm": false
+            },
+            "Form2": {
+                "ControllerExtensions": [],
+                "appName": "rentokilUi",
+                "controllerInfo": {
+                    "controllerActionName": "Form2Controller",
+                    "controllerChannel": "desktop",
+                    "controllerName": "Form2Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form2",
+                "isMDAForm": false
+            },
+            "Form3": {
+                "ControllerExtensions": [],
+                "appName": "rentokilUi",
+                "controllerInfo": {
+                    "controllerActionName": "Form3Controller",
+                    "controllerChannel": "desktop",
+                    "controllerName": "Form3Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form3",
+                "isMDAForm": false
+            }
+        }
+    },
+    "templateControllerInfoMapping": {
+        "desktopweb": {
+            "SampleRowTemplate": {
+                "controllerActionDir": "flxSampleRowTemplateController",
+                "controllerChannel": "desktop",
+                "controllerName": "flxSampleRowTemplateController"
+            },
+            "SampleSectionHeaderTemplate": {
+                "controllerActionDir": "flxSectionHeaderTemplateController",
+                "controllerChannel": "desktop",
+                "controllerName": "flxSectionHeaderTemplateController"
+            }
+        }
+    },
+    "templatesifcMapping": {
+        "desktopweb": {
+            "flxSampleRowTemplate": {
+                "appName": "rentokilUi",
+                "controllerInfo": {
+                    "controllerActionName": "flxSampleRowTemplateController",
+                    "controllerChannel": "desktop",
+                    "controllerName": "flxSampleRowTemplateController"
+                },
+                "friendlyName": "flxSampleRowTemplate",
+                "templateId": "flxSampleRowTemplate"
+            },
+            "flxSectionHeaderTemplate": {
+                "appName": "rentokilUi",
+                "controllerInfo": {
+                    "controllerActionName": "flxSectionHeaderTemplateController",
+                    "controllerChannel": "desktop",
+                    "controllerName": "flxSectionHeaderTemplateController"
+                },
+                "friendlyName": "flxSectionHeaderTemplate",
+                "templateId": "flxSectionHeaderTemplate"
+            }
+        }
+    },
+    "userwidgetsifcMapping": {
+        "com.konymp.Login": {
+            "appName": "rentokilUi",
+            "classname": "Login",
+            "namespace": "com.konymp"
+        },
+        "com.viz.Header1": {
+            "appName": "rentokilUi",
+            "classname": "Header1",
+            "namespace": "com.viz"
+        },
+        "servicepage.servicePage": {
+            "appName": "rentokilUi",
+            "classname": "servicePage",
+            "namespace": "servicepage"
+        }
+    }
+}

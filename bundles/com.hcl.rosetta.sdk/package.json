@@ -1,0 +1,110 @@
+{
+  "name": "@janus/rosettajs",
+  "description": "JavaScript implementation of most OpenFormula and Notes formula functions and commands.  Based of off formulajs https://github.com/formulajs/formulajs",
+  "version": "2.3.5",
+  "author": "HCL Labs",
+  "license": "See LICENSE file",
+  "repository": {
+    "type": "git",
+    "url": "git@github01.hclpnp.com:phoenix-core/rosetta-api.git"
+  },
+  "main": "./dist/rosetta.js",
+  "files": [
+    "dist",
+    "buildNumber.json",
+    "categories.js"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "installTestData": "node ./installTestData.js",
+    "prebuild": "npm run clean-build && npm run lint && npm run generate-build-number",
+    "clean-build": "rm -rf ./dist",
+    "lint": "eslint lib",
+    "generate-build-number": "node ./createBuildNumber.sh",
+    "build": "npm run build:dev && npm run build:prod",
+    "build:dev": "webpack --mode development --config webpack.config.js",
+    "build:prod": "webpack --mode production --config webpack.config.js",
+    "postbuild": "npm run ts-compile && npm run populate-playground-dist && npm run create-dict-files && npm run create-hint-files",
+    "ts-compile": "tsc --project tsconfig.json --outDir ./dist",
+    "populate-playground-dist": "cpy package.json ./dist && cpy buildNumber.json ./dist && cpy docVersion.json ./dist",
+    "create-dict-files": "node ./createDictionaries.js",
+    "create-hint-files": "node ./generateHint.js",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/* -e \\!.yalc -e \\!.yalc/**/* -e \\!yalc.lock -e \\!.vscode -e \\!.vscode/**/*",
+    "watch": "mocha --watch --watch-files lib/**/*,test/**/*",
+    "test": "nyc env TZ=Etc/UTC mocha",
+    "unit-test": "nyc env TZ=Etc/UTC skip_drapi=true mocha",
+    "test-browser": "mkdirp ./.tmp ./timers && echo 'dummy' > ./timers/promises && browserify test/index.js -p [ tsify ] -s rosettajs > .tmp/test.js && http-server -p 8088 -s -o"
+  },
+  "dependencies": {
+    "@hcl-software/domino-rest-sdk-node": "^0.2.3",
+    "@janus/rosetta-converters": "^2.1.12",
+    "bessel": "^1.0.2",
+    "bowser": "^2.11.0",
+    "buffer": "^5.2.1",
+    "crypto-js": "^4.2.0",
+    "html-to-text": "8.2.1",
+    "jstat": "^1.9.2",
+    "loglevel": "^1.9.1",
+    "os-browserify": "^0.3.0",
+    "source-map-loader": "^4.0.0",
+    "stream-browserify": "^3.0.0",
+    "uuid-random": "1.3.2"
+  },
+  "devDependencies": {
+    "@danmasta/mocha-sonar": "^1.0.1",
+    "@types/chai": "4.3.3",
+    "@types/chai-almost": "1.0.1",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/crypto-js": "^4.1.1",
+    "@types/mocha": "9.1.1",
+    "@types/should": "^13.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "browserify": "^17.0.1",
+    "chai": "^4.3.4",
+    "chai-almost": "^1.0.1",
+    "chai-as-promised": "^7.1.1",
+    "chai-string": "1.5.0",
+    "cli-table": "^0.3.0",
+    "cpy-cli": "^4.2.0",
+    "eslint": "^7.32.0",
+    "http-server": "^14.1.1",
+    "jsdom": "^20.0.0",
+    "jsdom-global": "^3.0.2",
+    "lodash": "^4.17.21",
+    "mkdirp": "^1.0.4",
+    "mocha": "^10.4.0",
+    "nyc": "^15.1.0",
+    "run-func": "^1.0.5",
+    "should": "^11.1.0",
+    "sinon": "^20.0.0",
+    "tern": "^0.24.3",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.9.1",
+    "tsify": "5.0.4",
+    "w3c-hr-time": "^1.0.2",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-config-dump-plugin": "3.0.3"
+  },
+  "overrides": {
+    "js-beautify": {
+      "editorconfig": "^1.0.3"
+    }
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
+  },
+  "browser": {
+    "fs": false,
+    "vm": false,
+    "crypto": false,
+    "process": false,
+    "timers": false
+  }
+}

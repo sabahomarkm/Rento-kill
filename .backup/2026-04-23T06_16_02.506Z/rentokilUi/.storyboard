@@ -1,0 +1,49 @@
+{
+    "models": {
+        "desktop": {
+            "1366": {
+                "class": "GraphLinksModel",
+                "linkDataArray": [
+                    {
+                        "actionId": null,
+                        "from": "ge157d15db964749ba5db5b484a747d3",
+                        "points": [
+                            285.2,
+                            117.026806640625,
+                            295.2,
+                            117.026806640625,
+                            295.2,
+                            117.02680664062501,
+                            295.2,
+                            117.02680664062501,
+                            391.2,
+                            117.02680664062501,
+                            401.2,
+                            117.02680664062501
+                        ],
+                        "softLink": true,
+                        "to": "ac7c5805f2794dd994fe7ed2ddc50302"
+                    }
+                ],
+                "nodeDataArray": [
+                    {
+                        "formKUID": "ge157d15db964749ba5db5b484a747d3",
+                        "formName": "Form1",
+                        "isStartupForm": true,
+                        "key": "ge157d15db964749ba5db5b484a747d3",
+                        "loc": "8 25.026806640625",
+                        "thumbnailURL": "/assets/rentokilUi/forms/desktop/Form1.sm/.thumbs/1366.jpeg"
+                    },
+                    {
+                        "formKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "formName": "Form2",
+                        "isStartupForm": false,
+                        "key": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "loc": "401.2 25.026806640625",
+                        "thumbnailURL": "/assets/rentokilUi/forms/desktop/Form2.sm/.thumbs/1366.jpeg"
+                    }
+                ]
+            }
+        }
+    }
+}

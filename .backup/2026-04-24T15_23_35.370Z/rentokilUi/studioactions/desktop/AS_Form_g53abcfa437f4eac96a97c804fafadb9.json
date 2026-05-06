@@ -1,0 +1,248 @@
+{
+    "AS_Form_g53abcfa437f4eac96a97c804fafadb9": {
+        "id": "AS_Form_g53abcfa437f4eac96a97c804fafadb9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "Form2",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ac7c5805f2794dd994fe7ed2ddc50302"
+        },
+        "language": "js",
+        "eventType": "onMapping",
+        "actions": [{
+            "id": "INVOKE_OBJECT_SERVICE_ad3eb67f083d4cddac02825db01b9b3b",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {
+                "ME_Mapping_a3f4904ae07543b5988c03f7e557be18": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a3f4904ae07543b5988c03f7e557be18",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "serviceName",
+                        "widgetPath": "this.view.serviceName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "a22c0fc512f145f49f43015f6caac752",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "service",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "rentokil",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_gc9ae195eddb448cae62f11d4b8b34a4": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_gc9ae195eddb448cae62f11d4b8b34a4",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "TypeName",
+                        "widgetPath": "this.view.TypeName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "c1e8d76510b1467c84cf5cf8b0f780f5",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "type",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "rentokil",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_cf18ba4510b54e029fba02639e333ec6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cf18ba4510b54e029fba02639e333ec6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "ServiceDate",
+                        "widgetPath": "this.view.ServiceDate",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "d823f967d2fd422e88bad11812fecd58",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "date",
+                        "dataType": "date",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "rentokil",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_gfb3796ca14d4ed0ae9bf035121554e0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_gfb3796ca14d4ed0ae9bf035121554e0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "Username",
+                        "widgetPath": "this.view.Username",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "g1ca4a19422749b786681b8ef7580062",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "rentokil",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_fb383d211a6746b7baa3fd4903c8f622": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fb383d211a6746b7baa3fd4903c8f622",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "Address",
+                        "widgetPath": "this.view.Address",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "Form2",
+                        "widgetKUID": "e505dc6362274bda91b69d6b103f39d1",
+                        "itemKUID": "ac7c5805f2794dd994fe7ed2ddc50302",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "address",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "rentokilApiServices",
+                            "type": "objectsvcs",
+                            "objectname": "rentokil",
+                            "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                            "methodname": "create"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_a3f4904ae07543b5988c03f7e557be18", "ME_Mapping_gc9ae195eddb448cae62f11d4b8b34a4", "ME_Mapping_cf18ba4510b54e029fba02639e333ec6", "ME_Mapping_gfb3796ca14d4ed0ae9bf035121554e0", "ME_Mapping_fb383d211a6746b7baa3fd4903c8f622"],
+            "serviceconfig": {
+                "servicename": "rentokilApiServices",
+                "type": "objectsvcs",
+                "objectname": "rentokil",
+                "serviceid": "cafc5167-fb00-42df-8859-3b8db79e0239",
+                "methodname": "create"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_b3cae60813c54de58b6e211666cba337",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_OBJECT_SERVICE_ad3eb67f083d4cddac02825db01b9b3b",
+            "disabled": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_e7472ef125ab4a3e8c651e2e11d7d96f",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "rentokil.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_ad3eb67f083d4cddac02825db01b9b3b",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_f184eb300338483e902cb14c4f1d71b8",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_OBJECT_SERVICE_ad3eb67f083d4cddac02825db01b9b3b",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_i15429a2fa4345a8998b971310a8a9fb",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Record creation failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_f184eb300338483e902cb14c4f1d71b8",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

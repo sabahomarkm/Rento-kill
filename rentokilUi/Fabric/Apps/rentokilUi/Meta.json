@@ -1,0 +1,13 @@
+{
+  "meta" : "{\"0f57a270-d8d0-4f41-834a-39c030fa5059\":{\"isUpdated\":false}}",
+  "subType" : "customapp",
+  "description" : "This app is created from Studio App rentokilUi.\r\n",
+  "version" : "1.0",
+  "objectSvcs" : [ {
+    "name" : "rentokilApiServices",
+    "version" : "1.0",
+    "etag" : "3cb67dbb-df6a-4485-8343-4a643e670203"
+  } ],
+  "identity" : [ "authService" ],
+  "identitySvcConf" : "{\"session_idle_timeout_mins\":20,\"session_max_duration_mins\":360,\"show_security_attributes\":false,\"is_integrity_enabled\":false,\"auto_extend\":true}"
+}

@@ -1,0 +1,20 @@
+{
+    "models": {
+        "desktop": {
+            "1366": {
+                "class": "GraphLinksModel",
+                "linkDataArray": [],
+                "nodeDataArray": [
+                    {
+                        "formKUID": "h62f20809f264b4890d5afe684f709ca",
+                        "formName": "Form1",
+                        "isStartupForm": true,
+                        "key": "h62f20809f264b4890d5afe684f709ca",
+                        "loc": "8 25.026806640625",
+                        "thumbnailURL": "/assets/rentokil/forms/desktop/Form1.sm/.thumbs/1366.jpeg"
+                    }
+                ]
+            }
+        }
+    }
+}

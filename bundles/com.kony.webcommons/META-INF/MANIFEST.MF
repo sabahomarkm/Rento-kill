@@ -1,0 +1,512 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.8
+Created-By: 1.8.0_265-b01 (Oracle Corporation)
+Bundle-ManifestVersion: 1
+Bundle-Name: Volt MX Web Commons
+Bundle-SymbolicName: com.kony.webcommons
+Bundle-Version: 10.0.6.0.v202604101248
+Bundle-Activator: com.kony.web.Activator
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,lib/activation.jar
+Bundle-Vendor: HCL America, Inc.
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/pom.xml
+SHA-256-Digest: J9skwZ3UdLaw42zeRoCM2/EupeubJqoVCyBADcTL+9U=
+
+Name: common/wap/inputdata/webfiles/iphone/listArrow.png
+SHA-256-Digest: iO7TXXWQeYjF7fJojfAv2PSgTqx6VGfYR9o13dMscnA=
+
+Name: common/wap/inputdata/webfiles/src/error.jsp
+SHA-256-Digest: XAEfZamw577Q2yo2Xyf6A/D+bZw7rGxA9AQ0DWK/ZIc=
+
+Name: common/wap/inputdata/webfiles/iphone/grayButton.png
+SHA-256-Digest: A5uf/as2LJEphpuWHdKlkwl2uQ1hFF9xSufUMDm7DtY=
+
+Name: common/wap/inputdata/webfiles/iphone/fsc_right.png
+SHA-256-Digest: wUwsr0z4d6U8aTiONS5AN39MBs3fbQoPxi/Jt0J9vxc=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/java/com/hcl/mx/base/BasePortlet.java
+SHA-256-Digest: QBHWlpfmnqzu5HVIXysdNIDcHrIqrkLV6pej5ngFo/o=
+
+Name: common/wap/inputdata/webfiles/iphone/kwebfw-next-month.png
+SHA-256-Digest: 9q8hR9ScqC+PRZsX4EGqpxE7meWicbNaKDQ8X0glxwE=
+
+Name: common/wap/inputdata/webfiles/iphone/trightF.bmp
+SHA-256-Digest: rSite54UKr6xTbDd1blJEfJ0ptxxhp8TgtlAWZPR2Og=
+
+Name: common/wap/inputdata/webfiles/iphone/listArrowSel.png
+SHA-256-Digest: 3SgTh38SC+YwI+q1NWP+hYbl6NRzuDFdzBklvYtVTx0=
+
+Name: common/wap/inputdata/webfiles/iphone/radiobuttonselected.png
+SHA-256-Digest: PkODH/lmebtviD0hN1N2mpWeklL427H9BN2jC5sGczM=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/pom.xml
+SHA-256-Digest: J9skwZ3UdLaw42zeRoCM2/EupeubJqoVCyBADcTL+9U=
+
+Name: common/wap/inputdata/webfiles/js/async/kspadwasync.js
+SHA-256-Digest: efjd0sWQxPUVpbaU7/SW0xwQQkvofvfPIwk4dsWgg5Q=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/_base/jsp/html/main.jsp
+SHA-256-Digest: H+zNDIpqgd3T4jo6rGi23WLL8tjg3I9NMqiV3Gug33g=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/WEB-INF/portlet.xml
+SHA-256-Digest: dnj6lrHDIojH8F4sIHAg9+/4CdsD+KSuFizi71WvM4o=
+
+Name: common/wap/inputdata/webfiles/iphone/previous.png
+SHA-256-Digest: Bilis6MrxrUwIR/36CNIXoPO5/0C2ij5VdOWirSsAH8=
+
+Name: common/wap/inputdata/webfiles/iphone/k-cancel.png
+SHA-256-Digest: GKglHS3kgAxT2Z6hAjeiyKOnKK9/LnPeNMV43XpnPSc=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/META-INF/mav
+ en/archetype-metadata.xml
+SHA-256-Digest: j6yM2hvkw8y9ZAycX2Q3dcuALOq0kqaSndMCKqzN/50=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/META-INF/MANIFEST.MF
+SHA-256-Digest: SsyfoJMEQ7+3QET/am6n2nZ8DPZMjVDmEQW5eDVzOio=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletR
+ esource_en.properties
+SHA-256-Digest: YoqjpF62Ln8JkqSOHnE0TGBDmMZ2cpctw+JYP0dnWII=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePort
+ letResource_en.properties
+SHA-256-Digest: YoqjpF62Ln8JkqSOHnE0TGBDmMZ2cpctw+JYP0dnWII=
+
+Name: common/wap/10.0.6.0.v202604101248.txt
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: common/wap/inputdata/webfiles/iphone/tupF.png
+SHA-256-Digest: D5M9vAR5Y/ihuGzZG/sHPKZHKue5ONpcb8jVB6AMCs8=
+
+Name: common/wap/inputdata/webfiles/src/jetty-env.xml
+SHA-256-Digest: bc5nhXoPvQUPKZ1UqUBi8EwL/AJzrfIL9ZJ8W1WnDZw=
+
+Name: common/wap/inputdata/webfiles/iphone/tdownF.png
+SHA-256-Digest: YAF0FOejoQqjSGNMfCJUUBfYm+w0gBJ7m0bkdid1qTY=
+
+Name: common/wap/inputdata/webfiles/iphone/toolbar.png
+SHA-256-Digest: ayro9JMgggniBrmSQGGopwzz1zdYnMHfEvcInPPuKZk=
+
+Name: common/wap/inputdata/webfiles/iphone/fsc_up.png
+SHA-256-Digest: qaCGnwiwNJK0OM7fkYndjnBvp7313h3Hoy8pbJo+lKg=
+
+Name: common/wap/inputdata/webfiles/iphone/leftnav.png
+SHA-256-Digest: fezN2LgKwfUYsujEHK2IZzArM0O4Pk5fJkoEhpNbhqE=
+
+Name: common/wap/inputdata/webfiles/src/genericerror.jsp
+SHA-256-Digest: lvI5qbMA38XLxSFre7b+Z7SqWtXQXFwCZKtLSq1bBDw=
+
+Name: common/wap/inputdata/webfiles/iphone/k-left.png
+SHA-256-Digest: YbeE3aNARGj1I9CfmXEqnOlxnihK9gFAX9110VZi/FY=
+
+Name: common/wap/inputdata/webfiles/iphone/left-arrow.png
+SHA-256-Digest: 1Z8YXx0Mll6J2bFfXCIFkmjOMqK0CvGWFmgivDRUkRg=
+
+Name: common/wap/inputdata/webfiles/iphone/radiobuttonnormal.png
+SHA-256-Digest: W9kPYyHfb23BfYV/SekibI2U8scxdtxk5r9WHYpcV1g=
+
+Name: common/wap/inputdata/webfiles/iphone/zoomin.bmp
+SHA-256-Digest: E8tL3eXSbs4HPqB2yN5QfCLrFa4v103C15R66znGkWc=
+
+Name: common/wap/inputdata/webfiles/js/serviceworker/sw-ext.js
+SHA-256-Digest: es9+nsUAXuXl3Bk32h+6mhyc2vcGcEqcISh8xl7wwvc=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/.vscode/settings.json
+SHA-256-Digest: TId5g7f+ZFxci8N8yhDBFZj1/gb51ubORaGwYmGQnjw=
+
+Name: common/wap/inputdata/webfiles/iphone/right-arrow.png
+SHA-256-Digest: etBOgXTT6mJ+Ro+/vtqqMiAu8TAr5FyO17Ub2H6zGPQ=
+
+Name: common/wap/inputdata/webfiles/iphone/rotate-right-slotfooter.png
+SHA-256-Digest: PDsIJbRUkqaEmzIS7IBKCenyDf4aUuqaQtTGPpRflRE=
+
+Name: common/wap/inputdata/webfiles/iphone/pinstripes.png
+SHA-256-Digest: 97HZt4dMLWHN4gQ6Uay3rBoXlHH9hBUur+fapCXS6U8=
+
+Name: common/wap/inputdata/webfiles/iphone/konycross.png
+SHA-256-Digest: zkN3m01t4D64kQdSKaP8et0+FezkwJPNEQiBA4X4rf0=
+
+Name: common/wap/inputdata/webfiles/iphone/select_arrow_hover.gif
+SHA-256-Digest: K5ynaXdWqDZyJclgzEBrAshAldonLu8dYvS/dYXJ7q8=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/java/com/hcl/mx/base/BasePortlet.java
+SHA-256-Digest: QBHWlpfmnqzu5HVIXysdNIDcHrIqrkLV6pej5ngFo/o=
+
+Name: common/wap/inputdata/webfiles/iphone/sprite.png
+SHA-256-Digest: U/T71571pUTrKOqUcsjuINIgk5o/rtJChxVoeCwZhM8=
+
+Name: common/wap/inputdata/webfiles/iphone/blackdot.gif
+SHA-256-Digest: jNaKlNog8qFNWvWx5/gfNuy3nnEdwX3gSQEgHMwMkoE=
+
+Name: common/wap/inputdata/webfiles/iphone/toggleOn.png
+SHA-256-Digest: hOAcElyzqlwhOqfZEzxCoIs71bw82A0I3a1HQasHM60=
+
+Name: common/wap/compiler.jar
+SHA-256-Digest: qM99bRqT13Q3eo8l7EBJtIuDwFCbl5NlQYHloG2SxfU=
+
+Name: common/wap/inputdata/webfiles/iphone/calgrad.png
+SHA-256-Digest: 3v9UMbvlQFeXHf+XQ8BsW/SakORpJXR1NMOOxfUIHlo=
+
+Name: common/wap/inputdata/webfiles/iphone/fsc_left.png
+SHA-256-Digest: 0d+pIeHkJ+pHG1jgxFSYU7ifBHA1bc39oqV/A6qwRzM=
+
+Name: common/wap/inputdata/webfiles/iphone/slider.png
+SHA-256-Digest: A7ASp2/lCxFFKvYct42Cmc5pnB6NuXg6p++6U24TEX4=
+
+Name: common/wap/inputdata/webfiles/js/serviceworker/sw.js
+SHA-256-Digest: tRspJZh0sJ15qiGw2SymxmBLh4NnJb+VUJBrftnKmhQ=
+
+Name: common/wap/deviceDetectionLogic.xml
+SHA-256-Digest: VryG40ps3jWzsN9SrLtdcWEDbJXC7K25e6eamJf0Hks=
+
+Name: common/wap/inputdata/webfiles/iphone/sliderfocus.png
+SHA-256-Digest: qD3AyYXAhGX4K3QQp+fJ6p3Wz3Yt1iPUbuewVw2KQZU=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/hcl_mx_archetype-1.0
+ .jar
+SHA-256-Digest: PMBP/00iLHJ0KwYXIOTgtLXJ8zy+Q5fwiINgFvbL5f4=
+
+Name: common/wap/inputdata/webfiles/iphone/whitedot.gif
+SHA-256-Digest: ro1SNswPt2E9n118t51QjkDTyGWcO5ahoS9Hy9mP4K0=
+
+Name: common/wap/inputdata/webfiles/iphone/tleftF.png
+SHA-256-Digest: u4zLfMjd3trfmJHQGpnYEGMqX77GRWt+MmZyVtflpyo=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/pom.xml
+SHA-256-Digest: Jv4fgQ43CN166Df9nefJOnKIjCPYLPCVsptMHMyubtk=
+
+Name: common/wap/inputdata/webfiles/iphone/thumb.png
+SHA-256-Digest: Wq7ytBQeslJAERwKHn1tGXgg5PGoAzICwQlQMjrmH1w=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/scripts/DeployPortlet.xml
+SHA-256-Digest: AWO7KE2ygvT825cPvEAwP/v0pC4hwT9FIsmrLTtiC0o=
+
+Name: common/wap/inputdata/webfiles/js/serviceworker/sw-helper.js
+SHA-256-Digest: Ssn2lrag3nwIdT1E07veo5eDh+DZtBLWApPdlWZ71Vs=
+
+Name: common/wap/gson-2.8.9.jar
+SHA-256-Digest: 05mSkYVd5JXJTHQ3YbirUXbP6r4oGlqw2OjUUyb9cD4=
+
+Name: common/wap/inputdata/webfiles/iphone/tdownF.bmp
+SHA-256-Digest: CXca2u59OofAqR+e7CJOWtyZSdZcLAFf8tWTdiqbX1U=
+
+Name: common/wap/inputdata/webfiles/iphone/toparw.png
+SHA-256-Digest: S5PzA8MEVIBNuJvfSCMHqlHlZK3EpcVlLLd8ziRHhrU=
+
+Name: common/wap/inputdata/webfiles/iphone/rightnav.png
+SHA-256-Digest: At+jlUKEc828C/2ZGdjH7QIIMCxXyQSEmpIaTpLXuqw=
+
+Name: common/wap/inputdata/webfiles/src/web.xml
+SHA-256-Digest: odOMjmi7n6wXfMCe5nlDHHgCOsF1OYeakCqIGL3QBHg=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/_base/jsp/html/main.jsp
+SHA-256-Digest: H+zNDIpqgd3T4jo6rGi23WLL8tjg3I9NMqiV3Gug33g=
+
+Name: common/wap/inputdata/webfiles/iphone/zoomout.png
+SHA-256-Digest: HSK0MesdFDy2tF1/QHUnSqrzLdj9TWwhj3CDRR+9QdE=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/WEB-INF/ibm-web-ext.xml
+SHA-256-Digest: TDHNXNISK129wLOFAO+xbYTRKpn9A2l2XDEr18dxhVU=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/scripts/UndeployPortlet.xml
+SHA-256-Digest: CFweVOYwc6ADXmsE2yDSPoi8GqmK3GgyM6ki1V17QoE=
+
+Name: common/wap/inputdata/webfiles/iphone/loadingplaceholder.gif
+SHA-256-Digest: yVBlLd1nMbwXDjMlB+oBD+nLnSdQoQ6X5iDo/fu8I3s=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePort
+ letResource.properties
+SHA-256-Digest: f6l8/rFXKR8Oo22c9tU0yC9fetYNHdBULT23GGxTwmY=
+
+Name: common/wap/inputdata/webfiles/iphone/backButton.png
+SHA-256-Digest: Bmc01ZLy8hCJ7jIB2u27eDSdNoWmy7dv3yWFFaOo1z8=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/.vscode/settings.json
+SHA-256-Digest: TId5g7f+ZFxci8N8yhDBFZj1/gb51ubORaGwYmGQnjw=
+
+Name: common/wap/lib/test.txt
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: common/wap/inputdata/webfiles/iphone/k-go.png
+SHA-256-Digest: /VPofZ8zUAzIv9Asy/VAriimpmniH1KuiiCDvMxgFck=
+
+Name: common/wap/inputdata/webfiles/iphone/toggle.png
+SHA-256-Digest: dIcDHJlvW0+ZsIG+TxqKGOg0KkBkKrldcn3l/Hfn8IM=
+
+Name: common/wap/inputdata/webfiles/js/sync/kspadw.js
+SHA-256-Digest: 3puTutzH0y4YKk3xGQ62BXvvAuVfLrp5Yu+Omiupyps=
+
+Name: common/wap/inputdata/webfiles/iphone/resize.gif
+SHA-256-Digest: pSjlGBZgtNiIDC+41Ew/nLosSrgrKK3zd54DaM+hOMY=
+
+Name: common/wap/inputdata/webfiles/src/errorx.jsp
+SHA-256-Digest: ro04K9ha0OK5/pdlSGvVOV/WEzTXDbmCCdQQw4ZP77A=
+
+Name: common/wap/inputdata/webfiles/iphone/notick.png
+SHA-256-Digest: 4erztX0jbLE0ZspaA5X1VkfKg7og5Ob1jSBDOcgB2Hk=
+
+Name: common/wap/inputdata/webfiles/iphone/listGroup.png
+SHA-256-Digest: 1yzHnpdRDm5GPToZJpHCMA/1WjYbq+orBYLPLJNL3XM=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/scripts/UndeployPortlet.xml
+SHA-256-Digest: CFweVOYwc6ADXmsE2yDSPoi8GqmK3GgyM6ki1V17QoE=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/WEB-INF/ibm-web-bnd.xml
+SHA-256-Digest: g114Gtpgcj4581HAQCRk2fsL3h80Hdm7a/62At7p2lo=
+
+Name: common/wap/inputdata/webfiles/iphone/selection.png
+SHA-256-Digest: WBTwNbd3sObuCXJ3odXrYVIVAUzkSpXDnSsI1BzKF7A=
+
+Name: common/wap/inputdata/webfiles/iphone/checkboxselected.png
+SHA-256-Digest: OwCtssa/sX5PMkQBEB0ZcFlDQOCoRHtA1lFaI7Xgta4=
+
+Name: platform.properties
+SHA-256-Digest: Wp/wyGeh84wHj0T2fVQ4loblOblwGvjRLX8Z8gSdMlE=
+
+Name: common/wap/inputdata/webfiles/iphone/tupF.bmp
+SHA-256-Digest: NeIfTkF+1i0hq+K7ZVHQbDK2qSsIOzjBFM74rxorUuA=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/WEB-INF/classes/com/hcl/mx/base/nl/BasePortletR
+ esource.properties
+SHA-256-Digest: f6l8/rFXKR8Oo22c9tU0yC9fetYNHdBULT23GGxTwmY=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/WEB-INF/ibm-web-ext.xml
+SHA-256-Digest: TDHNXNISK129wLOFAO+xbYTRKpn9A2l2XDEr18dxhVU=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/WEB-INF/web.xml
+SHA-256-Digest: oR/1eJR+c60RRpmqGAzcSWZ5Mgsf8i2VMAtRv3/mPTM=
+
+Name: common/wap/inputdata/webfiles/iphone/checkboxnormal.png
+SHA-256-Digest: njiJ0A2pVru0oLqjP24qP91P09Gt9eDsVkn0MB58br8=
+
+Name: common/wap/inputdata/webfiles/iphone/whiteButton.png
+SHA-256-Digest: LdcBqdbDZQx7JOV/gtEKC3ZxYHllxno/iqrC4+A6WR0=
+
+Name: common/wap/inputdata/webfiles/iphone/tick.png
+SHA-256-Digest: uPveHqraqxzwvsShBVCMI6ZDWR4wAl4ClDH51wCdR0E=
+
+Name: common/wap/inputdata/webfiles/src/publish/web.xml
+SHA-256-Digest: tpJf8zMk1SlXLmer7OvX+MHk6EL59eMJWm3sOACmBEg=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/META-INF/MANIFEST.MF
+SHA-256-Digest: SsyfoJMEQ7+3QET/am6n2nZ8DPZMjVDmEQW5eDVzOio=
+
+Name: common/wap/inputdata/webfiles/iphone/rotate-left-slotfooter.png
+SHA-256-Digest: Xn64zacc3uqgaq8YkN2cgJKNmf5Mptts8/7RMxLH44M=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/README.md
+SHA-256-Digest: NJjuprNiz5CQv35bFMOrQStrdqoFFjxOUoizDZM2RJw=
+
+Name: konywebcommonslib/KonyWebCommons.jar
+SHA-256-Digest: uFkngkQpUFcyb/14VUB8aIVOa3qxK27so8FTzqn9B+8=
+
+Name: common/wap/inputdata/webfiles/iphone/konycalendar.png
+SHA-256-Digest: qKzpKj832MGHM2oRf8CGSiWfx2jx7ysqfwBIrzFHv48=
+
+Name: common/wap/seo.js
+SHA-256-Digest: e8Youz1HPHTbkMBLL3hUdXQdWsSLkiW3/XlCoRIhKhQ=
+
+Name: common/wap/inputdata/webfiles/iphone/nxtarw.png
+SHA-256-Digest: 94V4m+1019eKxE/QUJPivl4H2jWQdirKHkND7PbtxDQ=
+
+Name: common/wap/inputdata/webfiles/iphone/tleftF.bmp
+SHA-256-Digest: cIPp+RVLJKDrsL+0AieUWiprrxmoX37EBsZroyXq84E=
+
+Name: common/wap/inputdata/webfiles/iphone/kdropdownicon.png
+SHA-256-Digest: hMxD//8+gXRV/V0ipifO4VEwUIqaJl4ZrDPYW9Y5p7M=
+
+Name: common/wap/inputdata/webfiles/iphone/konysearch.png
+SHA-256-Digest: w3t+WtpqDK0ABV8Hk6YwY23PRgtC0IZCDchQgjv5HkI=
+
+Name: common/wap/inputdata/webfiles/iphone/next.png
+SHA-256-Digest: Gs5X5S9bENudYTWHLLyq9UIDStXBJi2W+ldN396SBY4=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/WEB-INF/portlet.xml
+SHA-256-Digest: dnj6lrHDIojH8F4sIHAg9+/4CdsD+KSuFizi71WvM4o=
+
+Name: common/wap/inputdata/webfiles/iphone/iphone_test.png
+SHA-256-Digest: DC1WIrK6jZmgSJj9CXC96b0LXt+91Q8Fmp3CbsoIt6Q=
+
+Name: common/wap/inputdata/webfiles/iphone/k-right.png
+SHA-256-Digest: XzEl0Rbleax7XwIXbuZ1NJa5CJ3XeRGFaOFuLZ1SXxk=
+
+Name: common/wap/inputdata/webfiles/iphone/trightF.png
+SHA-256-Digest: NXYdBGKK8fY4QeHcODwMTqqEKLnlHMrSzzhtyuDIweQ=
+
+Name: common/wap/package-as-portlet.xml
+SHA-256-Digest: utAej4S//nKz1DkvHtQ+iSxW06lCZz50kIViZnk3bpk=
+
+Name: common/wap/inputdata/webfiles/iphone/max.png
+SHA-256-Digest: sA41+IGvT+prZ7/XTmDTPpUDoUfKGpWwRIcxRA7mkqI=
+
+Name: common/wap/inputdata/webfiles/iphone/close.png
+SHA-256-Digest: ShMyiYRZowRgUHGXjnTwFeBzKR0J2icwsAAUTeI7Q8A=
+
+Name: common/wap/inputdata/webfiles/iphone/appmore.png
+SHA-256-Digest: y4Mlr4sKkoBK0RNPvJKWU4U2bND73cXWg86za8AVXMA=
+
+Name: common/wap/inputdata/webfiles/iphone/selectbox-icon.png
+SHA-256-Digest: A+vXHaYSzIEee/kCUOSzOzRlxFbGJeWoylWQRpYite8=
+
+Name: common/wap/inputdata/webfiles/iphone/min.png
+SHA-256-Digest: fuAXSn9ivzNX4Eu8n/peOkXQpwAzlHj1rSswQkfefJA=
+
+Name: common/wap/inputdata/webfiles/iphone/botarw.png
+SHA-256-Digest: jJpdkFjxs1qDHBigmMyqoJYXVNusqPmmjKZ36Ap1cgo=
+
+Name: common/wap/inputdata/webfiles/iphone/listboxIcon.png
+SHA-256-Digest: PT3CSMEV2yIqX0/O/Sd+NzdMogYqGefAxyrPB0DiaE4=
+
+Name: common/wap/inputdata/webfiles/iphone/select_arrow.gif
+SHA-256-Digest: X8G3d9osvXs7BWxjpuiqf/ptyRyezHR7FUqGvxICDCA=
+
+Name: common/wap/common-build.properties
+SHA-256-Digest: cCuOwpCEPFVjVVI8GyYv8sTFqJ9MTbthkqm3mgl7vr8=
+
+Name: common/wap/inputdata/webfiles/iphone/kwebfw-prev-month.png
+SHA-256-Digest: gK47OmG96mweVzJOvqC2iv6EuKQxprncK9ButwHglZY=
+
+Name: common/wap/KonyUtils.jar
+SHA-256-Digest: j/966/RDboePheLdkx6sdlmjAyxrcSI+nuJ8Mx8WxTw=
+
+Name: common/KonyFMParser.jar
+SHA-256-Digest: JZ4e+XWlN65F7W0cKAYi2845JC1HVo4kunrTCJOv8Hc=
+
+Name: common/wap/inputdata/webfiles/iphone/fsc_down.png
+SHA-256-Digest: 1j7RTpNc+eJkJQ60IGt6RafqJkVHGW09eClDKHcCRmo=
+
+Name: common/wap/inputdata/webfiles/iphone/zoomin.png
+SHA-256-Digest: ppvIOkldZ4nT0wp1ulVoFj+/9HEKaTRj+O38WQ/7MHc=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/webapp/WEB-INF/ibm-web-bnd.xml
+SHA-256-Digest: g114Gtpgcj4581HAQCRk2fsL3h80Hdm7a/62At7p2lo=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/scripts/DeployPortlet.xml
+SHA-256-Digest: AWO7KE2ygvT825cPvEAwP/v0pC4hwT9FIsmrLTtiC0o=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/webapp/WEB-INF/web.xml
+SHA-256-Digest: oR/1eJR+c60RRpmqGAzcSWZ5Mgsf8i2VMAtRv3/mPTM=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/.vscode/tasks.json
+SHA-256-Digest: vEPsind0SgvppoizQvaNuQ6VV0JpLvNOiig66RcEYtg=
+
+Name: common/wap/inputdata/webfiles/iphone/loading.gif
+SHA-256-Digest: cmSTHbvK0eKZ0KxuyzgVx0B5aBfIsb806KVvzNxCFdg=
+
+Name: common/wap/build.xml
+SHA-256-Digest: vYtLfAxs2+mN8bUi6fgq5gnBpC+ZsZM+PiuQJboXajc=
+
+Name: common/wap/inputdata/webfiles/iphone/cameraicon.png
+SHA-256-Digest: jkHNr+XdOwlgO/+qo7HdsD+5c1jkKJr7BxyKubrm0CY=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/classes/archetype-re
+ sources/src/main/java/com/hcl/mx/base/BasePortletPreferencesValidator.j
+ ava
+SHA-256-Digest: zwdyd0neJxVad3kuUK5iAL4TibP5tMo0Oea7QOedPTc=
+
+Name: common/wap/lib/konyweblib.jar
+SHA-256-Digest: 0zltVvQ4l5x91QIO0OMzZ7RbH8UyBQXxmatYhXQtT1U=
+
+Name: common/wap/inputdata/webfiles/spabot/index.jsp
+SHA-256-Digest: 7SEJt+3I69cIZHL5wqmtZ3jkL8ItcatUWr9Q4TkTMvw=
+
+Name: common/konysecurejs.jar
+SHA-256-Digest: Nkq/stcFBUNQEFC1zd9B4FBU57Ha8OA9rJkzfDV+szo=
+
+Name: common/wap/inputdata/webfiles/iphone/prvarw.png
+SHA-256-Digest: MPsM5L/nwzHUGdPj2Uzy11kp475Xd1SMPZlE+KvgW/Q=
+
+Name: common/wap/inputdata/webfiles/iphone/zoomout.bmp
+SHA-256-Digest: mSkfb60uMeISXAYIe73ThR2S2fv+O8yqXG9H2N8E7ro=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/META-INF
+ /maven/archetype-metadata.xml
+SHA-256-Digest: j6yM2hvkw8y9ZAycX2Q3dcuALOq0kqaSndMCKqzN/50=
+
+Name: common/wap/inputdata/webfiles/src/version.html
+SHA-256-Digest: bLQ68MJO/SG7lf2KTDbHu3t6r/xLKoePapVny3TQlNk=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/src/main/java/com/hcl/mx/base/BasePortletPreferencesValidat
+ or.java
+SHA-256-Digest: zwdyd0neJxVad3kuUK5iAL4TibP5tMo0Oea7QOedPTc=
+
+Name: common/wap/common-build.xml
+SHA-256-Digest: fGdJglECQEcRQ0Zyj8PcvjWKbLd2lcUAJs93ZPxcB7k=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/src/main/resources/archetyp
+ e-resources/.vscode/tasks.json
+SHA-256-Digest: vEPsind0SgvppoizQvaNuQ6VV0JpLvNOiig66RcEYtg=
+
+Name: common/wap/js.jar
+SHA-256-Digest: et5EUTJo98/ghXn472nk6mY7hhPTkjSRAAeExlDGfIs=
+
+Name: common/wap/inputdata/webfiles/iphone/cancel.png
+SHA-256-Digest: wxeie/xK7dNTL9NCtZNWR8yC12Hjvqp5NYbjOtZsrIg=
+
+Name: common/wap/inputdata/webfiles/iphone/radiobutton.png
+SHA-256-Digest: whGW2FvLLD2nD04IrcyQ1oXnXrEJy3OtFBORKhIw7Gw=
+
+Name: common/wap/inputdata/webfiles/iphone/leftarr.png
+SHA-256-Digest: smqVfnLcWXB9pZalXMl7Z7r2UKOVlEVtSMQZWyU8A4c=
+
+Name: common/wap/inputdata/webfiles/src/robots.txt
+SHA-256-Digest: bQdpvV5cu48ZcG2M2Xcek7fQr2In9YoZjFp5fh6DJIg=
+
+Name: common/wap/inputdata/webfiles/iphone/blueButton.png
+SHA-256-Digest: UE1tghkf0XrpbRX0LaziCsGJXv6JIFsLsgQVL/lu0L4=
+
+Name: common/wap/inputdata/webfiles/iphone/checkbox.png
+SHA-256-Digest: 02oLDadKt1vRFtNEsnaZes5IAQC2YSH340HS0jhQhRs=
+
+Name: common/wap/inputdata/webfiles/iphone/imgload.gif
+SHA-256-Digest: 6HrzVNUnjiIyktnspKd0wn+SCpycBQDXYPXjUmAVdso=
+
+Name: common/wap/inputdata/webfiles/iphone/toolButton.png
+SHA-256-Digest: wnK3MRsGW7a00dtjwpJveKIr4IOv2tCa4EUSW1H3i4A=
+
+Name: tc/genericerror.jsp
+SHA-256-Digest: uJeoc0PcbOnWkftUevxFLM2jgLSHGdA67lb3zbib7Fs=
+
+Name: common/wap/TXTemplate/hcl_mx_archetype/target/maven-archiver/pom.p
+ roperties
+SHA-256-Digest: BOXRJF3S8DMwEUAnKywoXAadzU/D03SuHTRSxcDn2+U=
+
+Name: common/wap/inputdata/webfiles/iphone/rightarr.png
+SHA-256-Digest: M7oMRbJUJLc2hYyhuHCwq7tE50wBMWvJf1EmPrOerIU=
+
+Name: common/wap/r.js
+SHA-256-Digest: bE/sz0z//jS+1q/NyGkPJtZbJyl5XWV9PHBa6YK0bOE=
+
+Name: common/wap/inputdata/webfiles/iphone/calbtn.gif
+SHA-256-Digest: 4gSCOkXueVpP/CZJmveClbH4EYWZhdbci4l9kTsRS5A=
+
